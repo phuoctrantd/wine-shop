@@ -86,7 +86,7 @@ function Home() {
                   </div>
                   <div className="top-product__content col-md-4">
                     <div className="top-title">
-                      <h2 className="top-title__title">Rượu nho năm 1a987</h2><img className="top-title__under" src={arrowunderline} alt="arrow title underline" />
+                      <h2 className="top-title__title">Rượu nho năm 1987</h2><img className="top-title__under" src={arrowunderline} alt="arrow title underline" />
                     </div><span className="price price--large">330.000</span><br /><a className="button" href="#!">Add to cart</a>
                     <p className="top-product__desc">Một hợp chất có trong rượu vang gọi là Resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro confcos khả năng ngăn chặn mật độ oxy hóa của protein béo.</p>
                     <div className="countdown">
