@@ -4,6 +4,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 
+
+
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; }
@@ -874,6 +877,9 @@ a {
   font-family: "Times New Roman", sans-serif;
   border: 1px solid #cacaca;
   color: #000; }
+  .fas{
+    padding-top: 3px;
+  }
 
 .navTab .nav-link {
   font-size: 1.6rem;
@@ -1004,7 +1010,8 @@ a {
     display: none !important; }
 
 .gallery {
-  margin-top: 10rem; }
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
   .gallery__img {
     position: relative;
     -webkit-transition: all 0.2s ease-in-out;
@@ -1730,3 +1737,4 @@ a {
   .error__nav form {
     margin: 2rem 0;
     max-width: 140px; }
+
