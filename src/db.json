@@ -1,0 +1,289 @@
+
+{
+    "products": [
+      { 
+        "id": 1, 
+        "images": [
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 3700000 ,
+        "price_before_discount": 3990000,
+        "quantity": 138,
+        "name": "Rượu vang nổ đà lạt",
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.",
+        "rating": 5,
+        "content":"Rượu Chivas 25 year old được so sánh với hương vị đặc biệt mang đậm phong cách của chính hãng Chivas từ những nguồn nguyên liệu cao cấp được sàng lọc gắt gao hoàn toàn không qua máy móc, tinh tế đến từng chi tiết nhỏ để mang đến sự trải nghiệm đầy thú vị cho người dùng nó. Có một công thức đặc biệt là chọn lựa những hạt ngũ cốc và mạch nha chất lượng nhất và ủ riêng biệt trong những thùng gỗ sồi có độ tuổi từ 18 năm trở nên trong một khoảng thời gian được định sẵn, và được hòa quyện theo tỉ lệ  để tạo nên rượu Chivas 25 years old.Rượu Chivas 25 Năm với sự pha trộn bởi những thùng whisky mạch nha lâu năm, với hương vị êm dịu, nhẹ nhàng nơi đầu lươi, dư âm hương hoa thanh lịch kéo dài đã làm say đắm biết bao dân sành rượu. Thưởng thức 1 ly Chivas Regal 25 sẽ đem đến nhiều cảm xúc thú vị cho người dùng.- Rượu Chivas 25 phiên bản 2015 được trình bày dưới hình thức bên ngoài là một hộp quà tặng sang trọng. Nó là dòng Whisky hiếm có, được pha trộn từ những loại Whisky hảo hạng nhất, sản xuất với số lượng có hạn và được đánh số Seri riêng trên mỗi chai.- Chivas Regal 25 năm tuổi mang đến cho bạn những trải nghiệm về rượu Whisky vô cùng đáng giá bởi vì đây là một loại Whisky pha trộn với nguyên liệu được lựa chọn kỹ càng bằng tay, mang đến một hương thơm ngát thật khác biệt. Chivas 25 năm có màu vàng hổ phách rực rỡ và mùi hương thơm nhiêu lớp của Trái cây sấy khô và Kẹo bơ, Chocola đắng và một ít Khói, dư vị ấm áp kéo dài và đáng nhớ với ghi chú của Mai và Đào.- Cụ thể hơn, những hạt ngũ cốc và mạch nha ngon nhất và tốt nhất được chọn lựa để lên men và đưa vào chưng cất thành rượu sau đó chúng được ủ riêng biệt trong những thùng gỗ sồi có tuổi trưởng thành từ 25 năm trở lên. Cuối cùng chúng được hòa trộn với nhau để tạo thành Chivas Regal 25 năm. Rượu Chivas 25 là dòng rượu dành cho những quý tộc.- Colin Scott gia nhập Chivas Brothers theo sự hướng dẫn của một người thầy là Jimy Lang, học tất cả truyền thống của Chivas Brothers trong nghệ thuật phối trộn và phong cách rượu Whisky của nhà Chivas. Sau khi Jimy Lang nghỉ hưu Colin Scott đã trở thành bậc thầy pha chế rượu (Master Blend) tại hãng rượu Chivas Brothers"
+      },
+      { 
+        "id": 2, 
+        "images": [
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 3100000 ,
+        "price_before_discount": 3990000,
+        "quantity": 138,
+        "name": "Whiskey Crown 99",
+        "rating": 4.5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+      },
+      { 
+        "id": 3, 
+        "images": [
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 1700000 ,
+        "price_before_discount": 3990000,
+        "quantity": 138,
+        "name": "Prince Laurent Champagnes",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 4, 
+        "images": [
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 2500000 ,
+        "price_before_discount": 5000000,
+        "quantity": 138,
+        "name": "Rượu Vang Ý Alessandro",
+        "rating": 4,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 5, 
+        "images": [
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 9900000 ,
+        "price_before_discount": 13990000,
+        "quantity": 138,
+        "name": "Rượu-Claudius Caesar Doux",
+        "rating": 3.5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 6, 
+        "images": [
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 1000000 ,
+        "price_before_discount": 3000000,
+        "quantity": 138,
+        "name": "Rượu Vang Sủi Gemma Di Luna",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 7, 
+        "images": [
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 2900000 ,
+        "price_before_discount": 5990000,
+        "quantity": 138,
+        "name": "Rượu Vang Trắng Greywacke",
+        "rating": 3,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 8, 
+        "images": [
+          "https://i.ibb.co/9cvvd84/8.jpg", 
+          "https://i.ibb.co/Wz8RpmR/1.jpg",
+          "https://i.ibb.co/dfMwXxb/2.jpg",
+          "https://i.ibb.co/56W7Djc/3.jpg",
+          "https://i.ibb.co/JC4ksZ7/4.jpg",
+          "https://i.ibb.co/QHrm4Td/5.jpg",
+          "https://i.ibb.co/3RCz82K/6.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg" 
+        ],  
+        "price": 1800000 ,
+        "price_before_discount": 2990000,
+        "quantity": 138,
+        "name": "Rượu Vang Trắng Le Cabanon",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 9, 
+        "images": [
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 1500000 ,
+        "price_before_discount": 3900000,
+        "quantity": 138,
+        "name": "Rượu Vang Đỏ F Negroamaro Salento",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 10, 
+        "images": [
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 1000000 ,
+        "price_before_discount": 3000000,
+        "quantity": 138,
+        "name": "Rượu Vang Đỏ Louis Latour Côte De",
+        "rating": 4,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 11, 
+        "images": [
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 7000000 ,
+        "price_before_discount": 8000000,
+        "quantity": 138,
+        "name": "Rượu Vang Đỏ Robert Mondavi",
+        "rating": 3.5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 12, 
+        "images": [
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 6500000 ,
+        "price_before_discount": 9900000,
+        "quantity": 138,
+        "name": "Rượu Vang Đỏ CastelGiocondo",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 13, 
+        "images": [
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ], 
+        "price": 7000000 ,
+        "price_before_discount": 9900000,
+        "quantity": 138,
+        "name": "Rượu vang đỏ Three Dreamers",
+        "rating": 4.5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      },
+      { 
+        "id": 14, 
+        "images": [
+          "https://i.ibb.co/gZm17rj/14.jpg",
+          "https://i.ibb.co/Tb0nFQg/9.jpg",
+          "https://i.ibb.co/BrV0RnQ/10.jpg",
+          "https://i.ibb.co/zJXd86F/11.jpg",
+          "https://i.ibb.co/y49gtCc/12.jpg",
+          "https://i.ibb.co/mHFR7HN/13.jpg",
+          "https://i.ibb.co/M6sfWZM/7.jpg", 
+          "https://i.ibb.co/9cvvd84/8.jpg" 
+        ],  
+        "price": 370000 ,
+        "price_before_discount": 399000,
+        "quantity": 138,
+        "name": "Rượu Sâm Panh Champagne",
+        "rating": 5,
+        "description": "Một hợp chất có trong rượu vang gọi là resverato có khả năng làm tăng tối đa tuổi thọ. Resverato còn có khả năng ngăn chặn mật độ oxy hóa của protein béo."
+        
+      }
+
+     
+    ]
+  
+  }
+
+ 

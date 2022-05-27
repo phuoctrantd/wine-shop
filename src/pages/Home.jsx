@@ -23,40 +23,13 @@ import avt3 from '../assets/images/customer-avatar-3.jpg'
 
 
 function Home() {
+
   return (
+    
     <div>
-        {/* <section className="header__carousel d-none d-sm-block">
-            <div className="carousel slide" id="headerCarousel" data-bs-ride="carousel"> 
-            <div className="carousel-indicators">
-                <button className="active" type="button" data-bs-target="#headerCarousel" data-bs-slide-to={0} aria-current="true" aria-label="Slide 1" />
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to={1} aria-label="Slide 2" />
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to={2} aria-label="Slide 3" />
-            </div>
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                <div className="header__carousel-container"><img className="header__carousel-img" src="./assets/images/slide-1.jpg" alt="Vang Đỏ" />
-                    <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">Rượu<span className="header__carousel-year">Since 1980</span><span className="header__carousel-subtitle">Vang Đỏ</span></h2>
-                    </div>
-                </div>
-                </div>
-                <div className="carousel-item">
-                <div className="header__carousel-container"><img className="header__carousel-img" src="./assets/images/slide-2.jpg" alt="Vang Trắng" />
-                    <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">Rượu<span className="header__carousel-year">Since 1980</span><span className="header__carousel-subtitle">Vang Trắng</span></h2>
-                    </div>
-                </div>
-                </div>
-                <div className="carousel-item">
-                <div className="header__carousel-container"><img className="header__carousel-img" src="./assets/images/slide-3.jpg" alt="Champagne" />
-                    <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">Rượu<span className="header__carousel-year">Since 1980</span><span className="header__carousel-subtitle">Champagne</span></h2>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </section> */}
+        <section className="header__carousel d-none d-sm-block">
+          
+        </section>
         <section className="intro"><img className="intro__bg-left" src={introbgleft} /><img className="intro__bg-right" src={introbgright} />
           <div className="intro__content">
             <div className="container text-center">
@@ -325,6 +298,7 @@ function Home() {
             </div>
           </div>
         </section>
+        
         {/* end gallery */}
 
         {/* product-hot */}
