@@ -2,7 +2,7 @@ import React from "react";
 import arrowunderline from "../assets/images/underline-arrow.png";
 import productads from "../assets/images/product-ads.jpg";
 import ProductItem from "../components/ProductItem";
-import { Link } from "@mui/material";
+import Category from "../components/Category";
 
 function Product() {
   return (
@@ -12,7 +12,7 @@ function Product() {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <Link to="/">Trang chủ</Link>
+                <a href="/">Trang chủ</a>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 Sản phẩm
@@ -42,135 +42,12 @@ function Product() {
                           alt="arrow title underline"
                         />
                       </div>
-                      <nav>
-                        <h4>Rượu ngoại</h4>
-                        <ul className="product__category-list">
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Chivas<span> (26)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Hàng độc - Rượu độc đáo<span> (36)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a className="active" href="#">
-                              Johnnie Walker<span> (46)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Whisky<span> (24)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Remy Martin<span> (16)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Glenmorangie<span> (11)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Ballantine's<span> (7)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Cognac<span> (40)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vodka<span> (93)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Chivas<span> (26)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Macallan<span> (19)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Brandy<span> (62)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Hennessy<span> (20)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Gin - Tequila - Liqueur - Rượu mùi
-                              <span> (36)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Champagne<span> (12)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Single malt Scotch whisky<span> (47)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Spirits<span> (4)</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <h4>Rượu vang</h4>
-                        <ul className="product__category-list">
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Pháp<span> (44)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Úc<span> (34)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Mỹ<span> (16)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Chile<span> (48)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Philip<span> (1)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Nam Phi<span> (20)</span>
-                            </a>
-                          </li>
-                          <li className="product__category-item">
-                            <a href="#">
-                              Rượu Vang Ý<span> (2)</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
+                      
+
+                    <Category></Category>
+                   
+
+
                     </div>
                   </div>
                   <div className="col-12 col-sm-6 col-md-12">

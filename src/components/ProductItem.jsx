@@ -8,6 +8,7 @@ import "antd/dist/antd.css";
 import to_slug from '../utils/helper';
 import { Link } from 'react-router-dom';
 
+
 function ProductItem() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState("");
@@ -48,6 +49,7 @@ function ProductItem() {
               total={total}
               current={page}
             />
+            
           </nav>
         </div>
       </div>
