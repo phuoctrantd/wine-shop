@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { getIdFromUrl } from "../utils/helper";
 import { getBlogDetail } from '../app/blogDetail.slice';
 import { unwrapResult } from "@reduxjs/toolkit";
+import BlogOther from '../components/BlogOther';
 
 
 
@@ -50,33 +51,8 @@ function BlogDetail() {
           <aside className="blog-detail__sidebar">
             <div className="blog-detail__new-post">
               <h2 className="blog-detail__title">Bài viết mới nhất</h2>
-              <div className="new-post">
-                <div className="row">
-                  <div className="col-4"><img src="./assets/images/new-post-1.jpg" alt="new post 1 image" /></div>
-                  <div className="col-8"> <a href="/blog-detail.html">
-                      <h5 className="new-post__title">Cách sắp xếp nội thất trong nhà</h5></a>
-                    <p className="new-post__date"><em className="me-2 far fa-calendar" /><span>12/06/2015</span></p>
-                  </div>
-                </div>
-              </div>
-              <div className="new-post">
-                <div className="row">
-                  <div className="col-4"><img src="./assets/images/new-post-2.jpg" alt="new post 2 image" /></div>
-                  <div className="col-8"> <a href="/blog-detail.html">
-                      <h5 className="new-post__title">Làm sao để bảo quản rượu được lâu?</h5></a>
-                    <p className="new-post__date"><em className="me-2 far fa-calendar" /><span>12/06/2015</span></p>
-                  </div>
-                </div>
-              </div>
-              <div className="new-post">
-                <div className="row">
-                  <div className="col-4"><img src="./assets/images/new-post-3.jpg" alt="new post 3 image" /></div>
-                  <div className="col-8"> <a href="/blog-detail.html">
-                      <h5 className="new-post__title">Uống rượu không say? Tại sao không?</h5></a>
-                    <p className="new-post__date"><em className="me-2 far fa-calendar" /><span>12/06/2015</span></p>
-                  </div>
-                </div>
-              </div>
+              <BlogOther/>
+              
             </div>
             
             <div className="blog-detail__video">

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { getCategory } from "../app/category.slice";
 import { path } from "../constants/path";
+import { Link } from "react-router-dom";
 
 function Category() {
   const [category, setCategory] = useState([]);
@@ -24,9 +25,9 @@ function Category() {
         <ul className="product__category-list" key={category.id}>
           {category.map((category) => (
             <li className="product__category-item">
-              <a href={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category=${category.id}`}>
                 {category.sub === 0 && category.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -34,9 +35,9 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <a href={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category=${category.id}`}>
                 {category.sub === 1 && category.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -44,9 +45,9 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <a href={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category=${category.id}`}>
                 {category.sub === 2 && category.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

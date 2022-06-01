@@ -3,6 +3,7 @@ import arrowunderline from "../assets/images/underline-arrow.png";
 import productads from "../assets/images/product-ads.jpg";
 import ProductItem from "../components/ProductItem";
 import Category from "../components/Category";
+import { Link } from "react-router-dom";
 
 function Product() {
   return (
@@ -12,7 +13,7 @@ function Product() {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a href="/">Trang chủ</a>
+                <Link to="/">Trang chủ</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 Sản phẩm

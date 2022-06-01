@@ -4,15 +4,12 @@ import introbgleft from "../assets/images/intro-bg-left.jpg";
 import toptitle from "../assets/images/underline-special.png";
 import introbgright from "../assets/images/intro-bg-right.jpg";
 import underlinespecial from "../assets/images/underline-special.png";
-import blog1 from "../assets/images/blog-1.jpg";
-import quote from "../assets/images/quote.png";
-import avt1 from "../assets/images/customer-avatar-1.jpg";
-import avt2 from "../assets/images/customer-avatar-2.jpg";
-import avt3 from "../assets/images/customer-avatar-3.jpg";
 import ProductOther from "../components/ProductOther";
 import Gallery from "../components/Gallery";
 import TopProduct from "../components/TopProduct";
 import { Link } from "react-router-dom";
+import CustomerReview from "../components/CustomerReview";
+import BlogHome from "../components/BlogHome";
 
 function Home() {
   return (
@@ -32,7 +29,14 @@ function Home() {
               />
             </div>
             <p className="intro__desc">
-            RƯỢU NHẬP KHẨU, trang website sản phẩm thuộc CÔNG TY TNHH HẦM RƯỢU VIỆT NAM, tự hào là doanh nghiệp nhập khẩu và phân phối rượu vang hàng đầu Việt Nam, với hơn 1000 sản phẩm rượu vang, bia, ly pha lê cao cấp Riedel và phụ kiện rượu vang nhập khẩu chính hãng. Chúng tôi không ngừng mở rộng quan hệ hợp tác với các nhà sản xuất uy tín trên thế giới để cung cấp những sản phẩm đa dạng, chất lượng cao, ở mọi mức giá đáp ứng nhu cầu tiêu dùng của khách hàng trên toàn quốc.
+              RƯỢU NHẬP KHẨU, trang website sản phẩm thuộc CÔNG TY TNHH HẦM RƯỢU
+              VIỆT NAM, tự hào là doanh nghiệp nhập khẩu và phân phối rượu vang
+              hàng đầu Việt Nam, với hơn 1000 sản phẩm rượu vang, bia, ly pha lê
+              cao cấp Riedel và phụ kiện rượu vang nhập khẩu chính hãng. Chúng
+              tôi không ngừng mở rộng quan hệ hợp tác với các nhà sản xuất uy
+              tín trên thế giới để cung cấp những sản phẩm đa dạng, chất lượng
+              cao, ở mọi mức giá đáp ứng nhu cầu tiêu dùng của khách hàng trên
+              toàn quốc.
             </p>
             <Link className="button" to="/about">
               Xem thêm
@@ -40,7 +44,7 @@ function Home() {
           </div>
         </div>
       </section>
-     <TopProduct></TopProduct>
+      <TopProduct></TopProduct>
       {/* productnew */}
       <section className="new-product">
         <div className="container">
@@ -67,167 +71,10 @@ function Home() {
         <div className="container">
           <div className="row gx-0 gx-md-5">
             <div className="col-12 col-md-6 col-lg-8">
-              <div className="blogCard-container">
-                <div className="top-title top-title--special text-center">
-                  <h2 className="top-title__title">Tin tức &amp; Blog</h2>
-                  <img
-                    className="top-title__under"
-                    src={underlinespecial}
-                    alt="special title underline"
-                  />
-                </div>
-                <div className="row mt-5">
-                  <div className="col-lg-6 mt-3">
-                    <article className="blogCard">
-                      <div className="blogCard__img">
-                        <img src={blog1} alt="blog image 1" />
-                        <div className="blogCard__overlay" />
-                      </div>
-                      <div className="blogCard__content">
-                        <h2 className="blogCard__title">
-                          Vang Thăng Long classic
-                        </h2>
-                        <p className="blogCard__info">
-                          Đăng bởi Giangle | 30/06/2015 | 60 bình luận
-                        </p>
-                        <p className="blogCard__desc text-justify">
-                          Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm
-                          lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
-                          đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương
-                          phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung
-                          tích 750m ...
-                        </p>
-                        <a href="/blog-detail.html">Read more</a>
-                      </div>
-                    </article>
-                  </div>
-                  <div className="col-lg-6 mt-3">
-                    <article className="blogCard">
-                      <div className="blogCard__img">
-                        <img src={blog1} alt="blog image 2" />
-                        <div className="blogCard__overlay" />
-                      </div>
-                      <div className="blogCard__content">
-                        <h2 className="blogCard__title">
-                          Vang Thăng Long classic
-                        </h2>
-                        <p className="blogCard__info">
-                          Đăng bởi Giangle | 30/06/2015 | 60 bình luận
-                        </p>
-                        <p className="blogCard__desc text-justify">
-                          Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm
-                          lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
-                          đầy trắng mịn. Vang Nổ thăng long ...
-                        </p>
-                        <a href="/blog-detail.html">Read more</a>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
+              <BlogHome></BlogHome>
             </div>
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="customerReview-container">
-                <div className="top-title top-title--special text-center">
-                  <h2 className="top-title__title">Khách hàng</h2>
-                  <img
-                    className="top-title__under"
-                    src={underlinespecial}
-                    alt="special title underline"
-                  />
-                </div>
-                <div
-                  className="carousel slide"
-                  id="customerReview"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-indicators">
-                    <button
-                      className="active"
-                      type="button"
-                      data-bs-target="#customerReview"
-                      data-bs-slide-to={0}
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    />
-                    <button
-                      type="button"
-                      data-bs-target="#customerReview"
-                      data-bs-slide-to={1}
-                      aria-label="Slide 2"
-                    />
-                    <button
-                      type="button"
-                      data-bs-target="#customerReview"
-                      data-bs-slide-to={2}
-                      aria-label="Slide 3"
-                    />
-                  </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <div className="review-carousel text-center mt-4">
-                        <img className="mt-3" src={quote} alt="quote" />
-                        <p className="customerReview__desc text-center">
-                          Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm
-                          lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
-                          đầy trắng mịn, Vang nổ đỏ Thăng Long...
-                        </p>
-                        <a className="text-center d-block" href="#">
-                          Read more
-                        </a>
-                        <div className="customerReview__avatar">
-                          <img src={avt1} alt="customer avatar 1" />
-                        </div>
-                        <h4 className="customerReview__name mb-0">GIANG LT</h4>
-                        <span className="customerReview__job">
-                          Graphic design
-                        </span>
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="review-carousel text-center mt-4">
-                        <img className="mt-3" src={quote} alt="quote" />
-                        <p className="customerReview__desc text-center">
-                          Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm
-                          lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
-                          đầy trắng mịn, Vang nổ đỏ Thăng Long...
-                        </p>
-                        <a className="text-center d-block" href="#">
-                          Read more
-                        </a>
-                        <div className="customerReview__avatar">
-                          <img src={avt2} alt="customer avatar 2" />
-                        </div>
-                        <h4 className="customerReview__name mb-0">GIANG LT</h4>
-                        <span className="customerReview__job">
-                          Graphic design
-                        </span>
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="review-carousel text-center mt-4">
-                        <img className="mt-3" src={quote} alt="quote" />
-                        <p className="customerReview__desc text-center">
-                          Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm
-                          lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga
-                          đầy trắng mịn, Vang nổ đỏ Thăng Long...
-                        </p>
-                        <a className="text-center d-block" href="#">
-                          Read more
-                        </a>
-                        <div className="customerReview__avatar">
-                          <img src={avt3} alt="customer avatar 3" />
-                        </div>
-                        <h4 className="customerReview__name mb-0">GIANG LT</h4>
-                        <span className="customerReview__job">
-                          Graphic design
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <CustomerReview></CustomerReview>
           </div>
         </div>
       </section>

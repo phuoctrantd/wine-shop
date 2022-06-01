@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
 import slideimg from "../assets/images/slide-1.jpg";
 import Menu from "./Menu";
-
 function Header() {
   return (
     <>
@@ -56,99 +55,11 @@ function Header() {
             </nav>
           </div>
         </div>
-        {/* slide */}
-
-        <section className="header__carousel d-none d-sm-block">
-          <div
-            className="carousel slide"
-            id="headerCarousel"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-indicators">
-              <button
-                className="active"
-                type="button"
-                data-bs-target="#headerCarousel"
-                data-bs-slide-to={0}
-                aria-current="true"
-                aria-label="Slide 1"
-              />
-              <button
-                type="button"
-                data-bs-target="#headerCarousel"
-                data-bs-slide-to={1}
-                aria-label="Slide 2"
-              />
-              <button
-                type="button"
-                data-bs-target="#headerCarousel"
-                data-bs-slide-to={2}
-                aria-label="Slide 3"
-              />
-            </div>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <div className="header__carousel-container">
-                  <img
-                    className="header__carousel-img"
-                    src={slideimg}
-                    alt="Vang Đỏ"
-                  />
-                  <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">
-                      Rượu
-                      <span className="header__carousel-year">Since 1980</span>
-                      <span className="header__carousel-subtitle">Vang Đỏ</span>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="header__carousel-container">
-                  <img
-                    className="header__carousel-img"
-                    src={slideimg}
-                    alt="Vang Trắng"
-                  />
-                  <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">
-                      Rượu
-                      <span className="header__carousel-year">Since 1980</span>
-                      <span className="header__carousel-subtitle">
-                        Vang Trắng
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="header__carousel-container">
-                  <img
-                    className="header__carousel-img"
-                    src={slideimg}
-                    alt="Champagne"
-                  />
-                  <div className="header__carousel-content">
-                    <h2 className="header__carousel-title">
-                      Rượu
-                      <span className="header__carousel-year">Since 1980</span>
-                      <span className="header__carousel-subtitle">
-                        Champagne
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* end-slide */}
-
+        
         <Menu></Menu>
       </header>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header

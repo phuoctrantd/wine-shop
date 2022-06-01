@@ -2,6 +2,7 @@ import React from 'react'
 import arrowunderline from "../assets/images/underline-arrow.png";
 import { useDispatch,useSelector } from 'react-redux';
 import { cartActions } from '../app/cart.slice';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const dispatch = useDispatch()
@@ -79,9 +80,9 @@ function Cart() {
           </tbody>
         </table>
       </div>
-      <div className="cart__group-button"><a className="me-sm-3 button" href="/product">Tiếp tục mua hàng </a>
-      <a className="flex-grow-1 flex-sm-grow-0 me-3 mt-3 mt-sm-0 button " href='/cart' >Cập nhật</a>
-      <a className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button" href="/">xoá</a></div>
+      <div className="cart__group-button"><Link className="me-sm-3 button" to="/product">Tiếp tục mua hàng </Link>
+      <Link className="flex-grow-1 flex-sm-grow-0 me-3 mt-3 mt-sm-0 button " to='/cart' >Cập nhật</Link>
+      <Link className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button" to="/">xoá</Link></div>
     </div>
   </section>
 </div>

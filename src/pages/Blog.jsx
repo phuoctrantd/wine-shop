@@ -50,9 +50,9 @@ const [blogItems, setBlogItems] = useState([]);
             <div className="col-12 col-sm-6 col-lg-4 mb-3 mb-md-5" key={blogItems.id}>
               <article className="blogCard">
                 <div className="blogCard__img">
-                
-                  <img src={blogItems.images} alt={blogItems.title} />
                   
+                  <img src={blogItems.images} alt={blogItems.title} />
+                    
                   <div className="blogCard__overlay" />
                 </div>
                 <div className="blogCard__content">
