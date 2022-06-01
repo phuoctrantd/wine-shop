@@ -411,6 +411,73 @@
         "sub": 2
       }
 
+    ],
+    "blog": [
+      {
+        "id": 2000,
+        "title": "3 NHÀ MÁY CHƯNG CẤT RƯỢU SINGLETON",
+        "images": "https://i.ibb.co/THTyXkQ/Dufftown-distillery.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+      "createdAt": "01/06/2022"
+      },
+      {
+        "id": 2001,
+        "title": "VANG THĂNG LONG CLASSIC",
+        "images": "https://i.ibb.co/M5rYSJp/blog-1.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+      "createdAt": "01/06/2022"
+      
+      },
+      {
+        "id": 2002,
+        "title": "LỄ HỘI MALTS CAMPBELTOWN CỦA GLEN SCOTIA",
+        "images": "https://i.ibb.co/Kw1C6nj/blog-2.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "29/05/2022"
+        
+      },
+      {
+        "id": 2003,
+        "title": "FAMOUS GROUSE RA MẮT DÒNG SẢN PHẨM SHERRY CASK FINISH",
+        "images": "https://i.ibb.co/THTyXkQ/Dufftown-distillery.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "21/05/2022"
+      },
+      {
+        "id": 2004,
+        "title": "SỰ KHÁC NHAU GIỮA RƯỢU ARMAGNAC VÀ COGNAC",
+        "images": "https://i.ibb.co/M5rYSJp/blog-1.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "20/05/2022"
+      },
+      {
+        "id": 2005,
+        "title": "RƯỢU WHISKY INTREPID LẬP KỶ LUẬT THẾ GIỚI",
+        "images": "https://i.ibb.co/Kw1C6nj/blog-2.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "15/05/2022"
+      },
+      {
+        "id": 2006,
+        "title": "RƯỢU WHISKY GLENFARCLRAS ĐÃ BỊ TRỘM VỚI TRỊ GIÁ 100,000 BẢNG ANH",
+        "images": "https://i.ibb.co/M5rYSJp/blog-1.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "13/05/2022"
+      },
+      {
+        "id": 2007,
+        "title": "DÒNG RƯỢU WHISKY MỚI GLENGOYNE VỚI PHIÊN BẢN NGOẠI TUYẾN",
+        "images": "https://i.ibb.co/THTyXkQ/Dufftown-distillery.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "11/05/2022"
+      },
+      {
+        "id": 2008,
+        "title": "KHÁM PHÁ VỀ RƯỢU ARMAGNAC",
+        "images": "https://i.ibb.co/Kw1C6nj/blog-2.jpg",
+        "content": "Từng loại trong số ba loại whisky này vốn được phân bổ theo vùng cho các thị trường khác nhau trên thế giới - Dufftown ở Châu Âu, Glendullan ở Mỹ và Glen Ord ở Viễn đông. Trong một khoảng thời gian, điều này từng gây nhiều tranh cãi từ phía người tiêu dùng, từ vài năm trở lại đây, sự phân chia này đã linh hoạt hơn và các dòng single malt từ 3 nhà máy chưng cất này hiện đã được phân phối trên toàn cầu,Cái tên được biết tới nhiều nhất trong 3 nhà máy ở UK, Dufftown nằm ở thị trấn cùng tên, thị trấn whisky nhộn nhịp nhất Scotchland. Tại đây, đã có 10 nhà máy hoạt động trong nhiều năm , và 7 nhà máy hoạt động cùng một lúc, nhưng nay đã giảm còn lại 6 nhà máy: Balvenie, Glenfiddich, Kininvie, Mortlach, Glendullan và Dufftown.Đối với một nhà máy ít được biết đến, Dufftown lại có quy mô đáng ngạc nhiên, nhà máy này đứng ở vị tri thứ 13 trong bang xếp hạng về lượng sản xuất với 6 triệu lít/năm. Nó xuất hiện từ cuối những năm 1800 và từ lâu đã trở thành một phần quan trong trong hỗn hợp pha trộn Bell's. Tuy nhiên, sự xuất hiện của dòng sản phẩm Singleton vào đầu những năm 2000, thì nhà máy này mới bắt đầu được biết tới, và bây giờ Dufftown là nơi sản xuất rượu Single malt whisky.Whisky Dufftown mang hương cỏ và trái cây, và đặc tính ngọt của dòng mạch nha này sau nhiều năm trưởng thành là một ví dụ cổ điển của dòng Speyside Single malt.",
+        "createdAt": "05/05/2022"
+      }
     ]
     
   }

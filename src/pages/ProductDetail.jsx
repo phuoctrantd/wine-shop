@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { Rate } from "antd";
 import ProductOther from "../components/ProductOther";
 import ContentProduct from "../components/ContentProduct";
+import {cartActions} from '../app/cart.slice'
+import QuantityControler from "../components/QuantityControler";
 
 function ProductDetail() {
   const [productDetail, setProductDetail] = useState();
@@ -19,14 +21,15 @@ function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const [currentImage, setCurrentImage] = useState({});
   const [currentIndexImages, setCurrentIndexImages] = useState([0, 5]);
-
   const currentImages = useMemo(() => {
     if (productDetail) {
       return productDetail.images.slice(...currentIndexImages);
     }
     return [];
   }, [productDetail, currentIndexImages]);
+  
   useEffect(() => {
+    
     dispatch(getProductDetail(realId))
       .then(unwrapResult)
       .then((res) => {
@@ -41,6 +44,27 @@ function ProductDetail() {
       });
   }, [idProduct, dispatch]);
   const chooseCurrent = (image) => setCurrentImage(image);
+  const handleAddToCart = () => {
+      
+    const body = {
+      product_id: realId,
+      buy_count: quantity,
+      title: productDetail.name,
+      price: productDetail.price,
+      images : productDetail.images[0]
+      
+      
+    }
+    
+    dispatch(cartActions.addToCart( body ))
+  }
+  const handleQuantityChange = value => {
+    setQuantity(value)
+  }
+  
+  
+  
+ 
 
   return (
     <div>
@@ -103,7 +127,7 @@ function ProductDetail() {
                   </div>
 
                   <div className="col-12 col-md-5">
-                    <form className="product-detail__form">
+                    
                       <div className="top-title">
                         <h2 className="top-title__title">
                           {productDetail.name}
@@ -129,25 +153,28 @@ function ProductDetail() {
                           <option value="small">Loại nhỏ</option>
                         </select>
                       </div>
+
                       <div className="qty-option">
                         <h3 className="part-title">Số lượng</h3>
                         <div className="d-flex">
-                          <div className="qty-option__input-group me-4">
-                            <button className="qty-option__decrease">-</button>
-                            <input
-                              type="number"
-                              defaultValue={quantity}
-                              max={productDetail.quantity}
-                              min={1}
+
+                         <div className="qty-option__input-group me-4">
+
+
+                            <QuantityControler
+                            max={productDetail.quantity}
+                            value={quantity}
+                            onChange={handleQuantityChange}
                             />
-                            <button className="qty-option__increase">+</button>
+
                           </div>
-                          <button className="button" type="submit">
+                          <button className="button"  onClick={handleAddToCart}>
                             Add to cart
                           </button>
                         </div>
                       </div>
-                    </form>
+                    
+                    
                     <div className="product-detail__action mt-5">
                       <span className="me-5">
                         <a href="#">

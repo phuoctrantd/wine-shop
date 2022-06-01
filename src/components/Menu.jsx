@@ -5,6 +5,7 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import { getCategory } from "../app/category.slice";
 import { path } from "../constants/path";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 function Menu() {
   const [category, setCategory] = useState([]);
   const dispatch = useDispatch();
@@ -21,9 +22,9 @@ function Menu() {
     <div className="header__nav">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark">
-          <a className="header__nav-logo" href="/">
+          <Link className="header__nav-logo" to="/">
             <img src={logoyellow} alt="Brand logo" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -38,14 +39,14 @@ function Menu() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="header__nav-list w-100 d-lg-flex justify-content-between">
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/">
+                <Link className="header__nav-link" to="/">
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/product">
+                <Link className="header__nav-link" to="/product">
                   Rượu ngoại
-                </a>
+                </Link>
                 <div className="mega-menu">
                   <div className="row">
                     <div className="col-12 col-xl-8">
@@ -57,14 +58,14 @@ function Menu() {
                           >
                             <ul className="mega-menu__list">
                               <li className="mega-menu__list-item">
-                                <a
+                                <Link
                                   className="mega-menu__link"
-                                  href={
+                                  to={
                                     path.product + `?category=${category.id}`
                                   }
                                 >
                                   {category.sub === 0 && category.name}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -79,9 +80,9 @@ function Menu() {
               </li>
 
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/product">
+                <Link className="header__nav-link" to="/product">
                   Rượu Việt
-                </a>
+                </Link>
                 <div className="mega-menu">
                   <div className="row">
                     <div className="col-12 col-xl-8">
@@ -93,14 +94,14 @@ function Menu() {
                           >
                             <ul className="mega-menu__list">
                               <li className="mega-menu__list-item">
-                                <a
+                                <Link
                                   className="mega-menu__link"
-                                  href={
+                                  to={
                                     path.product + `?category=${category.id}`
                                   }
                                 >
                                   {category.sub === 1 && category.name}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -115,9 +116,9 @@ function Menu() {
               </li>
 
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/product">
-                  Khác
-                </a>
+                <Link className="header__nav-link" to="/product">
+                  Rượu khác
+                </Link>
                 <div className="mega-menu">
                   <div className="row">
                     <div className="col-12 col-xl-8">
@@ -129,14 +130,14 @@ function Menu() {
                           >
                             <ul className="mega-menu__list">
                               <li className="mega-menu__list-item">
-                                <a
+                                <Link
                                   className="mega-menu__link"
-                                  href={
+                                  to={
                                     path.product + `?category=${category.id}`
                                   }
                                 >
                                   {category.sub === 2 && category.name}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -150,19 +151,19 @@ function Menu() {
                 </div>
               </li>
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/about.html">
+                <Link className="header__nav-link" to="/about">
                   Thông tin
-                </a>
+                </Link>
               </li>
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/blog.html">
+                <Link className="header__nav-link" to="/blog">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="header__nav-item">
-                <a className="header__nav-link" href="/contact.html">
+                <Link className="header__nav-link" to="/contact">
                   Liên hệ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

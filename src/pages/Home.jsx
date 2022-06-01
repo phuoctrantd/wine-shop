@@ -3,8 +3,6 @@ import "../assets/css/style.css";
 import introbgleft from "../assets/images/intro-bg-left.jpg";
 import toptitle from "../assets/images/underline-special.png";
 import introbgright from "../assets/images/intro-bg-right.jpg";
-import topproduct from "../assets/images/top-product.jpg";
-import arrowunderline from "../assets/images/underline-arrow.png";
 import underlinespecial from "../assets/images/underline-special.png";
 import blog1 from "../assets/images/blog-1.jpg";
 import quote from "../assets/images/quote.png";
@@ -13,6 +11,8 @@ import avt2 from "../assets/images/customer-avatar-2.jpg";
 import avt3 from "../assets/images/customer-avatar-3.jpg";
 import ProductOther from "../components/ProductOther";
 import Gallery from "../components/Gallery";
+import TopProduct from "../components/TopProduct";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -32,112 +32,15 @@ function Home() {
               />
             </div>
             <p className="intro__desc">
-              Mriure dolor in hendrerit in vulputate velit esse molestie
-              consequat, vel illum dolore eu feugiat nulla facilisis at vero
-              eros et accumsan et iusto odio dignissim qui blandit praesent
-              luptatum zzril delenit augue duis dolore te feugait nulla
-              facilisi. Nam liber tempor cum soluta nobis eleifend option congue
-              nihil imperdiet doming id quod mazim placerat facer possim assum.
-              Typi non habent claritatem insitam; est usus legentis in iis qui
-              faciteorum claritatem Investigtiones demonstraverunt lectores
-              legere me lius quod ii legunt saepius.Claritas est etiam processus
-              dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
-              est notare quam littera gothica, quam nunc putam
+            RƯỢU NHẬP KHẨU, trang website sản phẩm thuộc CÔNG TY TNHH HẦM RƯỢU VIỆT NAM, tự hào là doanh nghiệp nhập khẩu và phân phối rượu vang hàng đầu Việt Nam, với hơn 1000 sản phẩm rượu vang, bia, ly pha lê cao cấp Riedel và phụ kiện rượu vang nhập khẩu chính hãng. Chúng tôi không ngừng mở rộng quan hệ hợp tác với các nhà sản xuất uy tín trên thế giới để cung cấp những sản phẩm đa dạng, chất lượng cao, ở mọi mức giá đáp ứng nhu cầu tiêu dùng của khách hàng trên toàn quốc.
             </p>
-            <a className="button" href="/about.html">
+            <Link className="button" to="/about">
               Xem thêm
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-      <section className="top-product">
-        <div className="container">
-          <div className="top-product__bg">
-            <div className="top-product__block">
-              <div className="row">
-                <div className="col-md-8">
-                  <div className="product-img">
-                    <img src={topproduct} />
-                    <div className="product-img__tag-sale" />
-                    <div className="product-img__option">
-                      <div className="row">
-                        <p className="product-img__wishlist col-5 m-0">
-                          <a className="text-center" href="#">
-                            <em className="fas fa-heart me-2"> </em>Yêu thích
-                          </a>
-                        </p>
-                        <p className="product-img__compare col-5 m-0">
-                          <a className="text-center" href="#">
-                            <em className="fas fa-signal me-2" />
-                            So sánh
-                          </a>
-                        </p>
-                        <p className="product-img__zoom-in col-2 m-0">
-                          <a className="text-center" href="#">
-                            <em className="fas fa-expand-alt" />
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="top-product__content col-md-4">
-                  <div className="top-title">
-                    <h2 className="top-title__title">Rượu nho năm 1987</h2>
-                    <img
-                      className="top-title__under"
-                      src={arrowunderline}
-                      alt="arrow title underline"
-                    />
-                  </div>
-                  <span className="price price--large">330.000</span>
-                  <br />
-                  <a className="button" href="#!">
-                    Add to cart
-                  </a>
-                  <p className="top-product__desc">
-                    Một hợp chất có trong rượu vang gọi là Resveratro có khả
-                    năng làm tăng tối đa tuổi thọ. Resveratro confcos khả năng
-                    ngăn chặn mật độ oxy hóa của protein béo.
-                  </p>
-                  <div className="countdown">
-                    <div className="row g-0">
-                      <div className="col-6">
-                        <div className="countdown__item text-center">
-                          <span className="countdown__number">334</span>
-                          <br />
-                          <span className="countdown__format">Ngày</span>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="countdown__item text-center">
-                          <span className="countdown__number">26</span>
-                          <br />
-                          <span className="countdown__format">Giờ</span>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="countdown__item text-center">
-                          <span className="countdown__number">60</span>
-                          <br />
-                          <span className="countdown__format">Phút</span>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="countdown__item text-center">
-                          <span className="countdown__number">15</span>
-                          <br />
-                          <span className="countdown__format">Giây</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     <TopProduct></TopProduct>
       {/* productnew */}
       <section className="new-product">
         <div className="container">

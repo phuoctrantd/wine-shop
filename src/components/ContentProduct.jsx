@@ -37,7 +37,6 @@ function ContentProduct(props) {
                     Thông tin sản phẩm
                   </button>
                 </li>
-                
               </ul>
               <div className="tab-content" id="pills-tabContent">
                 <div
@@ -57,8 +56,6 @@ function ContentProduct(props) {
                 >
                   <p className="desc">{props.productDetail.content}</p>
                 </div>
-
-                
               </div>
             </div>
           </div>

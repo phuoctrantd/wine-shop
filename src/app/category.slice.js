@@ -12,7 +12,7 @@ export const getCategory = createAsyncThunk(
 const category = createSlice({
   name: 'category',
   initialState: {
-    productDetail: {},
+    category: {},
     loading: false,
     error: ''
   },
@@ -23,7 +23,7 @@ const category = createSlice({
     [getCategory.fulfilled]: (state, action) => {
       state.loading = false
       state.error = ''
-      state.productDetail = action.payload.data
+      state.category = action.payload.data
     },
     [getCategory.rejected]: (state, action) => {
       state.loading = false

@@ -42,12 +42,8 @@ function Product() {
                           alt="arrow title underline"
                         />
                       </div>
-                      
 
-                    <Category></Category>
-                   
-
-
+                      <Category></Category>
                     </div>
                   </div>
                   <div className="col-12 col-sm-6 col-md-12">

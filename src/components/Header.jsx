@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import slideimg from "../assets/images/slide-1.jpg";
 import Menu from "./Menu";
+
 function Header() {
   return (
     <>
@@ -25,9 +27,9 @@ function Header() {
                   </a>
                 </li>
                 <li className="header__top-item">
-                  <a className="header__top-link" href="/cart.html">
+                  <Link className="header__top-link" to={"/cart"}>
                     Giỏ hàng
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__top-item">
                   <a className="header__top-link active" href="/login.html">
@@ -55,7 +57,7 @@ function Header() {
           </div>
         </div>
         {/* slide */}
-        
+
         <section className="header__carousel d-none d-sm-block">
           <div
             className="carousel slide"
@@ -140,12 +142,10 @@ function Header() {
             </div>
           </div>
         </section>
-        
+
         {/* end-slide */}
 
         <Menu></Menu>
-          
-        
       </header>
     </>
   );

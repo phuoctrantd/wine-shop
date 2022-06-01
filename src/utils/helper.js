@@ -14,7 +14,7 @@ export const payLoadCreater = asyncFunc => async (arg, thunkAPI) => {
     return arr[arr.length - 1]
   }
 
- 
+  
   
 const to_slug = (str) =>
 {

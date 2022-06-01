@@ -5,17 +5,16 @@ import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { Pagination } from "antd";
 import "antd/dist/antd.css";
-import to_slug from '../utils/helper';
-import { Link } from 'react-router-dom';
-
+import to_slug from "../utils/helper";
+import { Link } from "react-router-dom";
 
 function ProductItem() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState("");
   const [page, setPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(6);
-
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(getProducts())
       .then(unwrapResult)
@@ -49,7 +48,6 @@ function ProductItem() {
               total={total}
               current={page}
             />
-            
           </nav>
         </div>
       </div>
@@ -61,10 +59,12 @@ function ProductItem() {
             <div className="col-12 col-sm-6 col-lg-4" key={item.id}>
               <div className="product-block text-center">
                 <div className="product-img">
-                <Link to={"/product/"+ to_slug(item.name)+"-" + "i."+ item.id }>
-                <img src={item.images} alt={`product ${item.id} `} />
-                </Link>
-                  
+                  <Link
+                    to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+                  >
+                    <img src={item.images} alt={`product ${item.id} `} />
+                  </Link>
+
                   <div className="product-img__tag-null" />
                   <div className="product-img__option">
                     <div className="row">
@@ -87,7 +87,9 @@ function ProductItem() {
                     </div>
                   </div>
                 </div>
-                <Link to={"/product/"+ to_slug(item.name)+"-" + "i."+ item.id }>
+                <Link
+                  to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+                >
                   <h4 className="product-block__name">{item.name}</h4>
                 </Link>
                 <span className="price product-block__price">
