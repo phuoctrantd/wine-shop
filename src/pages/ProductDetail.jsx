@@ -12,6 +12,7 @@ import ProductOther from "../components/ProductOther";
 import ContentProduct from "../components/ContentProduct";
 import {cartActions} from '../app/cart.slice'
 import QuantityControler from "../components/QuantityControler";
+import {Helmet} from "react-helmet"
 
 function ProductDetail() {
   const [productDetail, setProductDetail] = useState();
@@ -21,6 +22,7 @@ function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const [currentImage, setCurrentImage] = useState({});
   const [currentIndexImages, setCurrentIndexImages] = useState([0, 5]);
+
   const currentImages = useMemo(() => {
     if (productDetail) {
       return productDetail.images.slice(...currentIndexImages);
@@ -44,8 +46,8 @@ function ProductDetail() {
       });
   }, [idProduct, dispatch]);
   const chooseCurrent = (image) => setCurrentImage(image);
+  
   const handleAddToCart = () => {
-      
     const body = {
       product_id: realId,
       buy_count: quantity,
@@ -68,8 +70,13 @@ function ProductDetail() {
 
   return (
     <div>
+      
       {productDetail && (
+        
         <>
+        <Helmet>
+        <title>{productDetail.name}</title>
+      </Helmet>
           <div>
             <section className="breadcrumb">
               <div className="container">

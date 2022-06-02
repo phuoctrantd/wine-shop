@@ -11,6 +11,9 @@ import BlogDetail from "../pages/BlogDetail";
 import HeaderHome from "../components/HeaderHome";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import NotFound from "../pages/NotFound";
+import Contact from "../pages/Contact";
+import DoneCheckout from "../pages/DoneCheckout";
 
 function Routes() {
   return (
@@ -35,6 +38,11 @@ function Routes() {
         <Cart></Cart>
         <Footer></Footer>
       </Route>
+      <Route path={path.checkout} exact>
+        <Header></Header>
+        <DoneCheckout></DoneCheckout>
+        <Footer></Footer>
+      </Route>
       <Route path={path.about} exact>
         <Header></Header>
         <About></About>
@@ -48,6 +56,17 @@ function Routes() {
       <Route path={path.blogDetail} exact>
         <Header></Header>
         <BlogDetail></BlogDetail>
+        <Footer></Footer>
+      </Route>
+      <Route path={path.contact} exact>
+        <Header></Header>
+        <Contact></Contact>
+        <Footer></Footer>
+      </Route>
+
+      <Route path={path.notFound} exact>
+        <Header></Header>
+        <NotFound></NotFound>
         <Footer></Footer>
       </Route>
     </Switch>

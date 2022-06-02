@@ -5,6 +5,9 @@ export const path ={
     cart: '/cart',
     about:'/about',
     blog:'/blog',
-    blogDetail:'/blog/:idBlog'
+    blogDetail:'/blog/:idBlog',
+    contact:'/contact',
+    checkout:'/checkout',
+    notFound:'*'
 
 }

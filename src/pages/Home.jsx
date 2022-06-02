@@ -10,10 +10,15 @@ import TopProduct from "../components/TopProduct";
 import { Link } from "react-router-dom";
 import CustomerReview from "../components/CustomerReview";
 import BlogHome from "../components/BlogHome";
-
+import {Helmet} from "react-helmet"
 function Home() {
   return (
     <div>
+      <Helmet>
+        <title>
+        Wine Hourse | Cửa Hàng Rượu ngoại cao cấp 
+        </title>
+      </Helmet>
       <section className="header__carousel d-none d-sm-block"></section>
       <section className="intro">
         <img className="intro__bg-left" src={introbgleft} />

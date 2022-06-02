@@ -1,6 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice,createAsyncThunk } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify';
-
+import checkoutApi from '../api/checkout.api';
+import {payLoadCreater} from '../utils/helper'
 
 const initialState = {
   cartItem: localStorage.getItem("cartItem")
@@ -26,7 +27,7 @@ const cart = createSlice({
     else{
     const tempProduct = {...action.payload,buy_count:1}
     state.cartItem.push(tempProduct);
-    toast.success(`thêm ${action.payload.title} thành công`,{
+    toast.success(`thêm sản phẩm ${action.payload.title} thành công`,{
         position:"top-right",
         autoClose: 1000,
     })
@@ -64,7 +65,7 @@ const cart = createSlice({
 
         state.cartItem = nextCartItems;
 
-        toast.error("Xóa sản phẩm khỏi giỏ", {
+        toast.error(`Xóa sản phẩm ${action.payload.title} khỏi giỏ hàng`, {
           position: "top-right",
           autoClose: 1000,
         });
@@ -82,7 +83,7 @@ const cart = createSlice({
 
           state.cartItem = nextCartItems;
 
-          toast.error("Xóa sản phẩm thành công", {
+          toast.error(`Xóa sản phẩm ${action.payload.title} khỏi giỏ hàng`, {
             position: "top-right",
             autoClose: 1000,
           });
@@ -92,12 +93,12 @@ const cart = createSlice({
       });
     },
     
-    
-  
-    
-    
   }
 })
+export const checkout = createAsyncThunk(
+  'cart/checkout',
+  payLoadCreater(checkoutApi.checkout)
+)
 
 const cartReducer = cart.reducer
 export const cartActions = cart.actions

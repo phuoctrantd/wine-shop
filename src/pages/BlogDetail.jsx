@@ -8,7 +8,7 @@ import { getIdFromUrl } from "../utils/helper";
 import { getBlogDetail } from '../app/blogDetail.slice';
 import { unwrapResult } from "@reduxjs/toolkit";
 import BlogOther from '../components/BlogOther';
-
+import {Helmet} from "react-helmet"
 
 
 function BlogDetail() {
@@ -31,6 +31,9 @@ function BlogDetail() {
     <div>
       {blogDetail && (
 <>
+<Helmet>
+        <title>{blogDetail.title}</title>
+      </Helmet>
   <section className="breadcrumb">
     <div className="container">
       <nav aria-label="breadcrumb">

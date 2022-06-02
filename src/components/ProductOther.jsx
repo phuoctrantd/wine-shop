@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import to_slug from "../utils/helper";
 import { Link } from "react-router-dom";
 
-
 function ProductOther() {
   var settings = {
     dots: true,
@@ -54,13 +53,17 @@ function ProductOther() {
         setItems(res.data);
       });
   }, [dispatch]);
+
+
+  
+
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settings} >
         {items.map((item) => (
-          <div className="col-12 col-md-6 col-lg-3">
+          <div className="col-12 col-md-6 col-lg-3" key={item.id}>
             <div className="product-block text-center">
-              <div className="product-img" key={item.id}>
+              <div className="product-img" >
                 <div className="product-img__tag-new" />
                 <Link
                   to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
@@ -79,9 +82,9 @@ function ProductOther() {
                 {item.price_before_discount.toLocaleString("vi-VN")}
               </span>
               <br />
-              <a className="button mt-4" href={"/"}>
+              <Link className="button mt-4" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id} >
                 Add to cart
-              </a>
+              </Link>
             </div>
           </div>
         ))}

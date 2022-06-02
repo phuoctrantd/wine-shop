@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import arrowunderline from "../assets/images/underline-arrow.png";
+import {Helmet} from "react-helmet"
 function About() {
   return (
     <div>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
   <section className="breadcrumb">
     <div className="container">
       <nav aria-label="breadcrumb">

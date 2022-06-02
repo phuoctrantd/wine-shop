@@ -4,10 +4,14 @@ import productads from "../assets/images/product-ads.jpg";
 import ProductItem from "../components/ProductItem";
 import Category from "../components/Category";
 import { Link } from "react-router-dom";
-
+import {Helmet} from "react-helmet"
 function Product() {
+  
   return (
     <div>
+      <Helmet>
+        <title>Sản phẩm</title>
+      </Helmet>
       <section className="breadcrumb">
         <div className="container">
           <nav aria-label="breadcrumb">

@@ -34,7 +34,7 @@ function TopProduct() {
                 <div className="top-title">
                   <Link to="/product/ruou-vang-no-da-lat-i.1">
                   {items.map((items) => (
-                    <h2 className="top-title__title">
+                    <h2 className="top-title__title" key={items.id}>
                       {items.id === 1 && items.name}
                     </h2>
                   ))}
@@ -47,13 +47,16 @@ function TopProduct() {
                 </div>
                 <span className="price price--large">
                   {items.map((items) => (
-                    <>{items.id === 1 && items.price.toLocaleString("vi-VN")}</>
+                    <span key={items.id}>
+                      {  items.id === 1 && items.price.toLocaleString("vi-VN")}
+                    </span>
+                    
                   ))}
                 </span>
                 <br />
-                <a className="button" href="#!">
+                <Link className="button" to="/product/ruou-vang-no-da-lat-i.1">
                   Add to cart
-                </a>
+                </Link>
                 <p className="top-product__desc">
                   Một hợp chất có trong rượu vang gọi là Resveratro có khả năng
                   làm tăng tối đa tuổi thọ. Resveratro confcos khả năng ngăn

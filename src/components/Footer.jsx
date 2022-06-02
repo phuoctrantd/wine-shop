@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import imgbrand1 from "../assets/images/brand-1.jpg";
-import imgbrand2 from "../assets/images/brand-1.jpg";
-import imgbrand3 from "../assets/images/brand-1.jpg";
+import imgbrand2 from "../assets/images/brand-2.jpg";
+import imgbrand3 from "../assets/images/brand-3.jpg";
 import imgpayment from "../assets/images/payment.jpg";
 function Footer() {
   return (
@@ -11,15 +12,15 @@ function Footer() {
         <div className="footer__brand">
           <div className="row">
             <div className="footer__brand-img col-md-4">
-              {" "}
+              
               <img src={imgbrand1} alt="Authentic brand" />
             </div>
             <div className="footer__brand-img col-md-4">
-              {" "}
+              
               <img src={imgbrand2} alt="Retrobrand" />
             </div>
             <div className="footer__brand-img col-md-4">
-              {" "}
+              
               <img src={imgbrand3} alt="Bearbrand" />
             </div>
           </div>
@@ -108,21 +109,21 @@ function Footer() {
                     <button className="btn button button--arrow">Gửi</button>
                   </form>
                   <div className="footer__menu-social">
-                    <a href="https://twitter.com/">
+                    <Link to="https://twitter.com/">
                       <em className="fab fa-twitter" />
-                    </a>
-                    <a href="https://www.google.com/">
+                    </Link>
+                    <Link to="https://www.google.com/">
                       <em className="fab fa-google" />
-                    </a>
-                    <a href="https://dribbble.com/">
+                    </Link>
+                    <Link to="https://dribbble.com/">
                       <em className="fab fa-dribbble" />
-                    </a>
-                    <a href="https://www.linkedin.com/">
+                    </Link>
+                    <Link to="https://www.linkedin.com/">
                       <em className="fab fa-linkedin-in" />
-                    </a>
-                    <a href="https://www.instagram.com/">
+                    </Link>
+                    <Link to="https://www.instagram.com/">
                       <em className="fab fa-instagram" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -175,7 +176,7 @@ function Footer() {
       <div className="container-fluid">
         <div className="footer__bottom">
           <div className="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
-            <span>© Copyright 2008-2014 DKT Technology JSC</span>
+            <span>© Copyright 2021-2022 Technology </span>
             <img
               className="px-5 py-3"
               src={imgpayment}

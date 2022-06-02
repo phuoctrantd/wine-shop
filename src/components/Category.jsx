@@ -25,7 +25,7 @@ function Category() {
         <ul className="product__category-list" key={category.id}>
           {category.map((category) => (
             <li className="product__category-item">
-              <Link to={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category_${category.id}`}>
                 {category.sub === 0 && category.name}
               </Link>
             </li>
@@ -35,7 +35,7 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <Link to={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category_${category.id}`}>
                 {category.sub === 1 && category.name}
               </Link>
             </li>
@@ -45,7 +45,7 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <Link to={path.product + `?category=${category.id}`}>
+              <Link to={path.product + `?category_${category.id}`}>
                 {category.sub === 2 && category.name}
               </Link>
             </li>

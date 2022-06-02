@@ -13,11 +13,7 @@ function HeaderHome() {
           <div className="container">
             <nav className="header__menu d-flex justify-content-between align-items-center">
               <ul className="header__top-list">
-                <li className="header__top-item">
-                  <a className="header__top-link" href="#!">
-                    Tài khoản của tôi
-                  </a>
-                </li>
+                
                 <li className="header__top-item">
                   <a className="header__top-link" href="/order-list.html">
                     Trạng thái đơn hàng
@@ -33,16 +29,8 @@ function HeaderHome() {
                     Giỏ hàng
                   </Link>
                 </li>
-                <li className="header__top-item">
-                  <a className="header__top-link active" href="/login.html">
-                    Đăng nhập
-                  </a>
-                </li>
-                <li className="header__top-item">
-                  <a className="header__top-link" href="/register.html">
-                    Đăng ký
-                  </a>
-                </li>
+                
+                
               </ul>
               <form className="d-flex">
                 <input

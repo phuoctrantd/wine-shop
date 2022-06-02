@@ -4,7 +4,7 @@ import { getProducts } from "../app/productitem.slice";
 import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { Pagination } from "antd";
-import "antd/dist/antd.css";
+import "../assets/css/antd.css"
 import to_slug from "../utils/helper";
 import { Link } from "react-router-dom";
 
@@ -99,9 +99,9 @@ function ProductItem() {
                   {item.price_before_discount.toLocaleString("vi-VN")}
                 </span>
                 <br />
-                <a className="button mt-4" href="#">
+                <Link className="button mt-4" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
                   Add to cart
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -119,28 +119,28 @@ function ProductItem() {
                     </div>
                   </div>
                   <div className="col-12 col-sm-8 col-xl-6">
-                    <a href="/product-detail.html">
+                    <Link to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
                       <h4 className="product-block__name">{item.name}</h4>
-                    </a>
+                    </Link>
                     <span className="price product-block__price">
                       {item.price.toLocaleString("vi-VN")}
                     </span>
                     <p className="desc mt-4">{item.description}</p>
                     <div className="row mt-5 px-2">
-                      <a className="col-4 button" href="#">
+                      <Link className="col-4 button" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
                         Add to cart
-                      </a>
+                      </Link>
                       <p className="col-4 product-img__wishlist m-0 text-center my-auto">
-                        <a href="#">
+                        <Link to="/">
                           <em className="fas fa-heart me-2" />
                           Yêu thích
-                        </a>
+                        </Link>
                       </p>
                       <p className="col-4 product-img__compare m-0 text-center my-auto">
-                        <a href="#">
+                        <Link to="/">
                           <em className="fas fa-signal me-2" />
                           So sánh
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>

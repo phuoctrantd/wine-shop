@@ -34,15 +34,15 @@ function QuantityControler({ max, value, item, onChange }) {
       }
 
   return (
-    <div><button className="qty-option__decrease" onClick={descreseNumber} >-</button>
-    <input
-      type="number"
+    <div><button className="quantitycart" onClick={descreseNumber} >-</button>
+    <input className="inputquantitycart"
+      
       min={1}
       max={max}
       value={value}
       onChange={handleInputChange}
     />
-    <button className="qty-option__decrease" onClick={increaseNumber}>+</button></div>
+    <button className="quantitycart" onClick={increaseNumber}>+</button></div>
   )
 }
 

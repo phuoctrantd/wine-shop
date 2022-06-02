@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { getBlog } from "../app/blog.slice";
 import to_slug from "../utils/helper";
+import {Helmet} from "react-helmet"
 function Blog() {
 const [blogItems, setBlogItems] = useState([]);
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ const [blogItems, setBlogItems] = useState([]);
 
   return (
     <div>
+      <Helmet>
+        <title>Blog</title>
+      </Helmet>
       <section className="breadcrumb">
         <div className="container">
           <nav aria-label="breadcrumb">
