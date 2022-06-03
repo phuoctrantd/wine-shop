@@ -7,11 +7,24 @@ import { Pagination } from "antd";
 import "../assets/css/antd.css";
 import to_slug from "../utils/helper";
 import { Link } from "react-router-dom";
+import { cartActions } from "../app/cart.slice";
 
 function ProductItem({ items, page, postPerPage, total, setPage }) {
   const indexOfLastPage = page + postPerPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
   const currentPosts = items.slice(indexOfFirstPage, indexOfLastPage);
+  const dispatch = useDispatch();
+  const handleAddToCart = (item) => {
+    const body = {
+      product_id: item.id,
+      buy_count: 1,
+      title: item.name,
+      price: item.price,
+      images: item.images[0],
+    };
+
+    dispatch(cartActions.addToCart(body));
+  };
 
   return (
     <>
@@ -63,12 +76,12 @@ function ProductItem({ items, page, postPerPage, total, setPage }) {
                   {item.price_before_discount.toLocaleString("vi-VN")}
                 </span>
                 <br />
-                <Link
+                <button
                   className="button mt-4"
-                  to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+                  onClick={() => handleAddToCart(item)}
                 >
                   Add to cart
-                </Link>
+                </button>
               </div>
             </div>
           ))}
@@ -98,18 +111,13 @@ function ProductItem({ items, page, postPerPage, total, setPage }) {
                     </span>
                     <p className="desc mt-4">{item.description}</p>
                     <div className="row mt-5 px-2">
-                      <Link
+                      
+                      <button
                         className="col-4 button"
-                        to={
-                          "/product/" +
-                          to_slug(item.name) +
-                          "-" +
-                          "i." +
-                          item.id
-                        }
+                        onClick={() => handleAddToCart(item)}
                       >
                         Add to cart
-                      </Link>
+                      </button>
                       <p className="col-4 product-img__wishlist m-0 text-center my-auto">
                         <Link to="/">
                           <em className="fas fa-heart me-2" />

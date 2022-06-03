@@ -8,15 +8,12 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import "reactjs-popup/dist/index.css";
 import { useHistory } from "react-router-dom";
 import { path } from "../constants/path";
-import {useFormik} from "formik"
-import * as Yup from "yup"
-import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from '../constants/regex'
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from "../constants/regex";
 
 function Cart() {
-  
-  
   const history = useHistory();
- 
 
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -31,8 +28,6 @@ function Cart() {
     dispatch(cartActions.removeFromCart(cartItem));
   };
 
-  
-
   const SubTotal = () => {
     let toltal = 0;
     cart.cartItem.map(
@@ -43,54 +38,46 @@ function Cart() {
   const toltal = SubTotal();
 
   const formik = useFormik({
-    initialValues:{
+    initialValues: {
       email: "",
       name: "",
-      phone:"",
-      address: ""
+      phone: "",
+      address: "",
     },
     validationSchema: Yup.object({
-      name : Yup.string()
-      .required("Tên là trường bắt buộc")
-      .min(4,"Tên quá ngắn")
-      .matches(NAME_REGEX, 'Chỉ được phép nhập bảng chữ cái cho trường này')
-      .max(15, 'Vui lòng nhập tối đa 15 kí tự trở xuống'),
-      email : Yup.string()
-      .required('Email là trường bắt buộc')
-      .email('Email này không hợp lệ')
-      .min(6, 'Email có độ dài từ 6 - 160 kí tự')
-      .max(160, 'Email có độ dài từ 6 - 160 kí tự'),
+      name: Yup.string()
+        .required("Tên là trường bắt buộc")
+        .min(4, "Tên quá ngắn")
+        .matches(NAME_REGEX, "Chỉ được phép nhập bảng chữ cái cho trường này")
+        .max(15, "Vui lòng nhập tối đa 15 kí tự trở xuống"),
+      email: Yup.string()
+        .required("Email là trường bắt buộc")
+        .email("Email này không hợp lệ")
+        .min(6, "Email có độ dài từ 6 - 160 kí tự")
+        .max(160, "Email có độ dài từ 6 - 160 kí tự"),
       address: Yup.string()
-      .required('Địa chỉ là trường bắt buộc')
-      .min(20, 'Địa chỉ có độ dài từ 20 đến 100 kí tự')
-      .max(160, 'Địa chỉ có độ dài từ 20 đến 100 kí tự'),
-      phone:  Yup.string()
-      .required('Số điện thoại là trường bắt buộc')
-      .min(10, 'Số điện thoại phải bao gồm 10 số')
-      .max(10, 'Số điện thoại phải bao gồm 10 số')
-      .matches(VN_PHONE_NUMBER_REGEX, 'Số điện thoại không hợp lệ'),
-      
+        .required("Địa chỉ là trường bắt buộc")
+        .min(20, "Địa chỉ có độ dài từ 20 đến 100 kí tự")
+        .max(160, "Địa chỉ có độ dài từ 20 đến 100 kí tự"),
+      phone: Yup.string()
+        .required("Số điện thoại là trường bắt buộc")
+        .min(10, "Số điện thoại phải bao gồm 10 số")
+        .max(10, "Số điện thoại phải bao gồm 10 số")
+        .matches(VN_PHONE_NUMBER_REGEX, "Số điện thoại không hợp lệ"),
     }),
-    onSubmit: (value,cartItem) => {
+    onSubmit: (info, cartItem) => {
       const body = {
         toltal,
         cartItem: cart.cartItem,
-        value,
+        info,
       };
       dispatch(checkout(body))
         .then(unwrapResult)
         .then(() => {});
       dispatch(cartActions.clearCart(cartItem));
       history.push(path.checkout);
-
-
-    }
-
-  })
-  
-  
-  
-  
+    },
+  });
 
   return (
     <div>
@@ -114,6 +101,7 @@ function Cart() {
           </nav>
         </div>
       </section>
+
       <section className="cart">
         <div className="container">
           <div className="top-title">
@@ -124,6 +112,13 @@ function Cart() {
               alt="arrow title underline"
             />
           </div>
+          {cart.cartItem.length === 0 && (
+                    
+                    
+                    <p className="carterror">Chưa có sản phẩm trong giỏ</p>
+  
+                  )}
+          {/* cart          */}
           <div className="cart__table">
             <table className="mt-5">
               <thead>
@@ -136,17 +131,22 @@ function Cart() {
                   <th>Xóa</th>
                 </tr>
               </thead>
+
               <tbody>
+               
                 {cart.cartItem.map((cartItem) => (
-                  
                   <tr key={cartItem.product_id}>
-                    
                     <td>
-                      <img src={cartItem.images.url} alt={cartItem.title} />
+                      <img
+                        src={cartItem.images.url || cartItem.images}
+                        alt={cartItem.title}
+                      />
                     </td>
+
                     <td>
                       <div className="cart-item__name">{cartItem.title}</div>
                     </td>
+                    
                     <td>
                       <h4 className="price">
                         {cartItem.price.toLocaleString("vi-VN")}
@@ -190,7 +190,8 @@ function Cart() {
               </tbody>
             </table>
           </div>
-
+          {/* end cart  */}
+          {/* total   */}
           <table className="table table-borderless bg-white mt20 cart-total">
             <tbody>
               <tr>
@@ -237,20 +238,19 @@ function Cart() {
               </tr>
             </tbody>
           </table>
-
+          {/* end total */}
           <div className="row-form">
             <div className="col-75">
               <div className="container-form">
                 {/* form order */}
-                <form onSubmit={formik.handleSubmit} >
+                <form onSubmit={formik.handleSubmit}>
                   <div className="row">
                     <div className="col-50">
                       <h3>Địa chỉ nhận hàng</h3>
                       <label className="labelform" htmlFor="fname">
                         <i className="fa fa-user" /> Họ và tên
                       </label>
-                      <input 
-                        
+                      <input
                         className="inputform"
                         type="text"
                         placeholder="Trần Văn A"
@@ -265,7 +265,6 @@ function Cart() {
                         <i className="fa fa-envelope" /> Email
                       </label>
                       <input
-                        
                         className="inputform"
                         type="text"
                         placeholder="john@example.com"
@@ -280,7 +279,6 @@ function Cart() {
                         <i className="fa fa-address-card-o" /> Địa chỉ
                       </label>
                       <input
-                        
                         className="inputform"
                         type="text"
                         placeholder="54 Trường Chinh"
@@ -295,7 +293,6 @@ function Cart() {
                         <i className="fa fa-phone" /> Số điện thoại
                       </label>
                       <input
-                        
                         className="inputform"
                         type="phone"
                         placeholder="09123456789"
@@ -314,7 +311,7 @@ function Cart() {
                     </Link>
 
                     <button
-                      
+                      disabled={cart.cartItem.length === 0}
                       className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button"
                       to="/"
                     >

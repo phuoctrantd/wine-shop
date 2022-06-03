@@ -6,9 +6,22 @@ import { getProducts } from "../app/productitem.slice";
 import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { Link } from "react-router-dom";
+import { cartActions } from "../app/cart.slice";
 function TopProduct() {
   const [items, setItems] = useState([]);
   const dispatch = useDispatch();
+
+  const handleAddToCart = (items) => {
+    const body = {
+      product_id: 1,
+      buy_count: 1,
+      title: "Rượu vang nổ đà lạt",
+      price: 3700000,
+      images: "https://i.ibb.co/Wz8RpmR/1.jpg",
+    };
+
+    dispatch(cartActions.addToCart(body));
+  };
 
   useEffect(() => {
     dispatch(getProducts())
@@ -53,9 +66,12 @@ function TopProduct() {
                   ))}
                 </span>
                 <br />
-                <Link className="button" to="/product/ruou-vang-no-da-lat-i.1">
+                <button
+                  className="button mt-4"
+                  onClick={() => handleAddToCart(items)}
+                >
                   Add to cart
-                </Link>
+                </button>
                 <p className="top-product__desc">
                   Một hợp chất có trong rượu vang gọi là Resveratro có khả năng
                   làm tăng tối đa tuổi thọ. Resveratro confcos khả năng ngăn

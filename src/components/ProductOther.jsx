@@ -6,7 +6,7 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import Slider from "react-slick";
 import to_slug from "../utils/helper";
 import { Link } from "react-router-dom";
-
+import { cartActions } from "../app/cart.slice";
 function ProductOther() {
   var settings = {
     dots: true,
@@ -46,6 +46,18 @@ function ProductOther() {
   };
   const [items, setItems] = useState([]);
   const dispatch = useDispatch();
+  const handleAddToCart = (item) => {
+    const body = {
+      product_id: item.id,
+      buy_count: 1,
+      title: item.name,
+      price: item.price,
+      images: item.images[0],
+    };
+
+    dispatch(cartActions.addToCart(body));
+  };
+
   useEffect(() => {
     dispatch(getProducts())
       .then(unwrapResult)
@@ -81,12 +93,12 @@ function ProductOther() {
                 {item.price_before_discount.toLocaleString("vi-VN")}
               </span>
               <br />
-              <Link
+              <button
                 className="button mt-4"
-                to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+                onClick={() => handleAddToCart(item)}
               >
                 Add to cart
-              </Link>
+              </button>
             </div>
           </div>
         ))}
