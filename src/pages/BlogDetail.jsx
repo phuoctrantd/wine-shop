@@ -15,7 +15,7 @@ function BlogDetail() {
   const dispatch = useDispatch();
   const { idBlog } = useParams();
   const realId = getIdFromUrl(idBlog);
-  console.log(realId);
+  
 
   useEffect(() => {
     dispatch(getBlogDetail(realId))
