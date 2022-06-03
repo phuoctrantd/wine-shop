@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import { Rate } from "antd";
 import ProductOther from "../components/ProductOther";
 import ContentProduct from "../components/ContentProduct";
-import {cartActions} from '../app/cart.slice'
+import { cartActions } from "../app/cart.slice";
 import QuantityControler from "../components/QuantityControler";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
 
 function ProductDetail() {
   const [productDetail, setProductDetail] = useState();
@@ -29,9 +29,8 @@ function ProductDetail() {
     }
     return [];
   }, [productDetail, currentIndexImages]);
-  
+
   useEffect(() => {
-    
     dispatch(getProductDetail(realId))
       .then(unwrapResult)
       .then((res) => {
@@ -46,37 +45,29 @@ function ProductDetail() {
       });
   }, [idProduct, dispatch]);
   const chooseCurrent = (image) => setCurrentImage(image);
-  
+
   const handleAddToCart = () => {
     const body = {
       product_id: realId,
       buy_count: quantity,
       title: productDetail.name,
       price: productDetail.price,
-      images : productDetail.images[0]
-      
-      
-    }
-    
-    dispatch(cartActions.addToCart( body ))
-  }
-  const handleQuantityChange = value => {
-    setQuantity(value)
-  }
-  
-  
-  
- 
+      images: productDetail.images[0],
+    };
+
+    dispatch(cartActions.addToCart(body));
+  };
+  const handleQuantityChange = (value) => {
+    setQuantity(value);
+  };
 
   return (
     <div>
-      
       {productDetail && (
-        
         <>
-        <Helmet>
-        <title>{productDetail.name}</title>
-      </Helmet>
+          <Helmet>
+            <title>{productDetail.name}</title>
+          </Helmet>
           <div>
             <section className="breadcrumb">
               <div className="container">
@@ -134,54 +125,46 @@ function ProductDetail() {
                   </div>
 
                   <div className="col-12 col-md-5">
-                    
-                      <div className="top-title">
-                        <h2 className="top-title__title">
-                          {productDetail.name}
-                        </h2>
-                        <img
-                          className="top-title__under"
-                          src={arrowunderline}
-                          alt="arrow title underline"
-                        />
-                      </div>
-                      <div className="product-detail__price price">
-                        {productDetail.price.toLocaleString("vi-VN")}
-                      </div>
-                      <div className="product-detail__review">
-                        <Rate allowHalf defaultValue={productDetail.rating} />
-                        <span className="ms-3">1 Review(S) </span>
-                      </div>
+                    <div className="top-title">
+                      <h2 className="top-title__title">{productDetail.name}</h2>
+                      <img
+                        className="top-title__under"
+                        src={arrowunderline}
+                        alt="arrow title underline"
+                      />
+                    </div>
+                    <div className="product-detail__price price">
+                      {productDetail.price.toLocaleString("vi-VN")}
+                    </div>
+                    <div className="product-detail__review">
+                      <Rate allowHalf defaultValue={productDetail.rating} />
+                      <span className="ms-3">1 Review(S) </span>
+                    </div>
 
-                      <div className="size-option">
-                        <h3 className="part-title">Kích cỡ</h3>
-                        <select name="wine size">
-                          <option value="big">Loại to</option>
-                          <option value="small">Loại nhỏ</option>
-                        </select>
-                      </div>
+                    <div className="size-option">
+                      <h3 className="part-title">Kích cỡ</h3>
+                      <select name="wine size">
+                        <option value="big">Loại to</option>
+                        <option value="small">Loại nhỏ</option>
+                      </select>
+                    </div>
 
-                      <div className="qty-option">
-                        <h3 className="part-title">Số lượng</h3>
-                        <div className="d-flex">
-
-                         <div className="qty-option__input-group me-4">
-
-
-                            <QuantityControler
+                    <div className="qty-option">
+                      <h3 className="part-title">Số lượng</h3>
+                      <div className="d-flex">
+                        <div className="qty-option__input-group me-4">
+                          <QuantityControler
                             max={productDetail.quantity}
                             value={quantity}
                             onChange={handleQuantityChange}
-                            />
-
-                          </div>
-                          <button className="button"  onClick={handleAddToCart}>
-                            Add to cart
-                          </button>
+                          />
                         </div>
+                        <button className="button" onClick={handleAddToCart}>
+                          Add to cart
+                        </button>
                       </div>
-                    
-                    
+                    </div>
+
                     <div className="product-detail__action mt-5">
                       <span className="me-5">
                         <a href="#">

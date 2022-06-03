@@ -1,5 +1,5 @@
-import {  createAsyncThunk,createSlice } from '@reduxjs/toolkit'
-import {payLoadCreater} from '../utils/helper'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { payLoadCreater } from '../utils/helper'
 import categoryApi from '../api/category.api'
 
 

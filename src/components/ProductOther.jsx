@@ -15,7 +15,7 @@ function ProductOther() {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    
+
     responsive: [
       {
         dots: true,
@@ -54,16 +54,13 @@ function ProductOther() {
       });
   }, [dispatch]);
 
-
-  
-
   return (
     <div>
-      <Slider {...settings} >
+      <Slider {...settings}>
         {items.map((item) => (
           <div className="col-12 col-md-6 col-lg-3" key={item.id}>
             <div className="product-block text-center">
-              <div className="product-img" >
+              <div className="product-img">
                 <div className="product-img__tag-new" />
                 <Link
                   to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
@@ -72,7 +69,9 @@ function ProductOther() {
                 </Link>
                 <div className="product-img__tag-null" />
               </div>
-              <Link to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
+              <Link
+                to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+              >
                 <h4 className="product-block__name">{item.name}</h4>
               </Link>
               <span className="price product-block__price">
@@ -82,7 +81,10 @@ function ProductOther() {
                 {item.price_before_discount.toLocaleString("vi-VN")}
               </span>
               <br />
-              <Link className="button mt-4" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id} >
+              <Link
+                className="button mt-4"
+                to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+              >
                 Add to cart
               </Link>
             </div>

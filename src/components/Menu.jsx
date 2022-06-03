@@ -60,9 +60,7 @@ function Menu() {
                               <li className="mega-menu__list-item">
                                 <Link
                                   className="mega-menu__link"
-                                  to={
-                                    path.product + `?category=${category.id}`
-                                  }
+                                  to={path.product + `?category=${category.id}`}
                                 >
                                   {category.sub === 0 && category.name}
                                 </Link>
@@ -96,9 +94,7 @@ function Menu() {
                               <li className="mega-menu__list-item">
                                 <Link
                                   className="mega-menu__link"
-                                  to={
-                                    path.product + `?category=${category.id}`
-                                  }
+                                  to={path.product + `?category=${category.id}`}
                                 >
                                   {category.sub === 1 && category.name}
                                 </Link>
@@ -132,9 +128,7 @@ function Menu() {
                               <li className="mega-menu__list-item">
                                 <Link
                                   className="mega-menu__link"
-                                  to={
-                                    path.product + `?category=${category.id}`
-                                  }
+                                  to={path.product + `?category=${category.id}`}
                                 >
                                   {category.sub === 2 && category.name}
                                 </Link>

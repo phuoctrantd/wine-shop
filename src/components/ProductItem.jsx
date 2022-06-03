@@ -4,25 +4,11 @@ import { getProducts } from "../app/productitem.slice";
 import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { Pagination } from "antd";
-import "../assets/css/antd.css"
+import "../assets/css/antd.css";
 import to_slug from "../utils/helper";
 import { Link } from "react-router-dom";
 
-function ProductItem() {
-  const [items, setItems] = useState([]);
-  const [total, setTotal] = useState("");
-  const [page, setPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(6);
-  const dispatch = useDispatch();
-  
-  useEffect(() => {
-    dispatch(getProducts())
-      .then(unwrapResult)
-      .then((res) => {
-        setItems(res.data);
-        setTotal(res.data.length);
-      });
-  }, [dispatch]);
+function ProductItem({ items, page, postPerPage, total, setPage }) {
   const indexOfLastPage = page + postPerPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
   const currentPosts = items.slice(indexOfFirstPage, indexOfLastPage);
@@ -51,7 +37,7 @@ function ProductItem() {
           </nav>
         </div>
       </div>
-      {/* endpanigation */}
+      {/* end panigation */}
       {/* product  */}
       <div className="product__grid">
         <div className="row">
@@ -64,28 +50,6 @@ function ProductItem() {
                   >
                     <img src={item.images} alt={`product ${item.id} `} />
                   </Link>
-
-                  <div className="product-img__tag-null" />
-                  <div className="product-img__option">
-                    <div className="row">
-                      <p className="product-img__wishlist col-5 m-0">
-                        <a className="text-center" href="#">
-                          <em className="fas fa-heart me-2"> </em>Yêu thích
-                        </a>
-                      </p>
-                      <p className="product-img__compare col-5 m-0">
-                        <a className="text-center" href="#">
-                          <em className="fas fa-signal me-2" />
-                          So sánh
-                        </a>
-                      </p>
-                      <p className="product-img__zoom-in col-2 m-0">
-                        <a className="text-center" href="#">
-                          <em className="fas fa-expand-alt" />
-                        </a>
-                      </p>
-                    </div>
-                  </div>
                 </div>
                 <Link
                   to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
@@ -99,7 +63,10 @@ function ProductItem() {
                   {item.price_before_discount.toLocaleString("vi-VN")}
                 </span>
                 <br />
-                <Link className="button mt-4" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
+                <Link
+                  className="button mt-4"
+                  to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}
+                >
                   Add to cart
                 </Link>
               </div>
@@ -119,7 +86,11 @@ function ProductItem() {
                     </div>
                   </div>
                   <div className="col-12 col-sm-8 col-xl-6">
-                    <Link to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
+                    <Link
+                      to={
+                        "/product/" + to_slug(item.name) + "-" + "i." + item.id
+                      }
+                    >
                       <h4 className="product-block__name">{item.name}</h4>
                     </Link>
                     <span className="price product-block__price">
@@ -127,7 +98,16 @@ function ProductItem() {
                     </span>
                     <p className="desc mt-4">{item.description}</p>
                     <div className="row mt-5 px-2">
-                      <Link className="col-4 button" to={"/product/" + to_slug(item.name) + "-" + "i." + item.id}>
+                      <Link
+                        className="col-4 button"
+                        to={
+                          "/product/" +
+                          to_slug(item.name) +
+                          "-" +
+                          "i." +
+                          item.id
+                        }
+                      >
                         Add to cart
                       </Link>
                       <p className="col-4 product-img__wishlist m-0 text-center my-auto">

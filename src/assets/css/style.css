@@ -1864,6 +1864,8 @@ a {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  outline: none;
+  padding-bottom: 0.25rem;
 }
 .labelform {
   margin-bottom: 10px;
@@ -1887,4 +1889,9 @@ a {
 }
 .p-checkout{
   text-align: center;
+}
+.errorMsg {
+  max-width: 100%;
+  font-size:1.50rem;
+  color:rgb(248, 106, 106);
 }

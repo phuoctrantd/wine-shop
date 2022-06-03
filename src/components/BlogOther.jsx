@@ -13,33 +13,39 @@ function BlogOther() {
     dispatch(getBlog())
       .then(unwrapResult)
       .then((res) => {
-        setBlogItems(res.data.slice(0,3));
+        setBlogItems(res.data.slice(0, 3));
       });
   }, [dispatch]);
   return (
     <>
-        {blogItems.map((blogItems) => (
-      <div className="new-post">
-        <div className="row">
+      {blogItems.map((blogItems) => (
+        <div className="new-post">
+          <div className="row">
             <>
-          <div className="col-4">
-            <img src={blogItems.images} alt={blogItems.title} />
+              <div className="col-4">
+                <img src={blogItems.images} alt={blogItems.title} />
+              </div>
+              <div className="col-8">
+                <Link
+                  to={
+                    "/blog/" +
+                    to_slug(blogItems.title) +
+                    "-" +
+                    "i." +
+                    blogItems.id
+                  }
+                >
+                  <h5 className="new-post__title">{blogItems.title}</h5>
+                </Link>
+                <p className="new-post__date">
+                  <em className="me-2 far fa-calendar" />
+                  <span>{blogItems.createdAt}</span>
+                </p>
+              </div>
+            </>
           </div>
-          <div className="col-8">
-            <Link to={"/blog/" + to_slug(blogItems.title) + "-" + "i." + blogItems.id}>
-              <h5 className="new-post__title">
-              {blogItems.title}
-              </h5>
-            </Link>
-            <p className="new-post__date">
-              <em className="me-2 far fa-calendar" />
-              <span>{blogItems.createdAt}</span>
-            </p>
-          </div>
-          </>
         </div>
-      </div>
-        ))}
+      ))}
     </>
   );
 }

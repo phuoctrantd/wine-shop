@@ -8,26 +8,15 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import "reactjs-popup/dist/index.css";
 import { useHistory } from "react-router-dom";
 import { path } from "../constants/path";
+import {useFormik} from "formik"
+import * as Yup from "yup"
+import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from '../constants/regex'
 
 function Cart() {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [address, setAddress] = useState();
-  const [phone, setPhone] = useState();
+  
+  
   const history = useHistory();
-
-  const handleNameOrder = (event) => {
-    setName(event.target.value);
-  };
-  const handleEmailOrder = (event) => {
-    setEmail(event.target.value);
-  };
-  const handleAddOrder = (event) => {
-    setAddress(event.target.value);
-  };
-  const handlePhoneOrder = (event) => {
-    setPhone(event.target.value);
-  };
+ 
 
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -42,6 +31,8 @@ function Cart() {
     dispatch(cartActions.removeFromCart(cartItem));
   };
 
+  
+
   const SubTotal = () => {
     let toltal = 0;
     cart.cartItem.map(
@@ -51,17 +42,55 @@ function Cart() {
   };
   const toltal = SubTotal();
 
-  const handleCheckOut = () => {
-    const body = {
+  const formik = useFormik({
+    initialValues:{
+      email: "",
+      name: "",
+      phone:"",
+      address: ""
+    },
+    validationSchema: Yup.object({
+      name : Yup.string()
+      .required("Tên là trường bắt buộc")
+      .min(4,"Tên quá ngắn")
+      .matches(NAME_REGEX, 'Chỉ được phép nhập bảng chữ cái cho trường này')
+      .max(15, 'Vui lòng nhập tối đa 15 kí tự trở xuống'),
+      email : Yup.string()
+      .required('Email là trường bắt buộc')
+      .email('Email này không hợp lệ')
+      .min(6, 'Email có độ dài từ 6 - 160 kí tự')
+      .max(160, 'Email có độ dài từ 6 - 160 kí tự'),
+      address: Yup.string()
+      .required('Địa chỉ là trường bắt buộc')
+      .min(20, 'Địa chỉ có độ dài từ 20 đến 100 kí tự')
+      .max(160, 'Địa chỉ có độ dài từ 20 đến 100 kí tự'),
+      phone:  Yup.string()
+      .required('Số điện thoại là trường bắt buộc')
+      .min(10, 'Số điện thoại phải bao gồm 10 số')
+      .max(10, 'Số điện thoại phải bao gồm 10 số')
+      .matches(VN_PHONE_NUMBER_REGEX, 'Số điện thoại không hợp lệ'),
       
-    };
+    }),
+    onSubmit: (value,cartItem) => {
+      const body = {
+        toltal,
+        cartItem: cart.cartItem,
+        value,
+      };
+      dispatch(checkout(body))
+        .then(unwrapResult)
+        .then(() => {});
+      dispatch(cartActions.clearCart(cartItem));
+      history.push(path.checkout);
 
-    dispatch(checkout(body))
-      .then(unwrapResult)
-      .then(() => {
-        
-      });
-  };
+
+    }
+
+  })
+  
+  
+  
+  
 
   return (
     <div>
@@ -109,7 +138,9 @@ function Cart() {
               </thead>
               <tbody>
                 {cart.cartItem.map((cartItem) => (
+                  
                   <tr key={cartItem.product_id}>
+                    
                     <td>
                       <img src={cartItem.images.url} alt={cartItem.title} />
                     </td>
@@ -206,68 +237,84 @@ function Cart() {
               </tr>
             </tbody>
           </table>
-          {/* form order */}
+
           <div className="row-form">
             <div className="col-75">
               <div className="container-form">
-                <form autocomplete="on">
+                {/* form order */}
+                <form onSubmit={formik.handleSubmit} >
                   <div className="row">
                     <div className="col-50">
                       <h3>Địa chỉ nhận hàng</h3>
                       <label className="labelform" htmlFor="fname">
                         <i className="fa fa-user" /> Họ và tên
                       </label>
-                      <input
-                        required
+                      <input 
+                        
                         className="inputform"
                         type="text"
                         placeholder="Trần Văn A"
-                        value={name}
-                        onChange={(event) => handleNameOrder(event)}
+                        onChange={formik.handleChange}
+                        value={formik.values.name}
+                        name="name"
                       />
+                      {formik.errors.name && (
+                        <p className="errorMsg"> {formik.errors.name} </p>
+                      )}
                       <label className="labelform" htmlFor="email">
                         <i className="fa fa-envelope" /> Email
                       </label>
                       <input
-                        required
+                        
                         className="inputform"
                         type="text"
                         placeholder="john@example.com"
-                        value={email}
-                        onChange={(event) => handleEmailOrder(event)}
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                        name="email"
                       />
+                      {formik.errors.email && (
+                        <p className="errorMsg"> {formik.errors.email} </p>
+                      )}
                       <label className="labelform" htmlFor="adr">
                         <i className="fa fa-address-card-o" /> Địa chỉ
                       </label>
                       <input
-                        required
+                        
                         className="inputform"
                         type="text"
-                        placeholder="542 W. 15th Street"
-                        value={address}
-                        onChange={(event) => handleAddOrder(event)}
+                        placeholder="54 Trường Chinh"
+                        onChange={formik.handleChange}
+                        value={formik.values.address}
+                        name="address"
                       />
+                      {formik.errors.address && (
+                        <p className="errorMsg"> {formik.errors.address} </p>
+                      )}
                       <label className="labelform" htmlFor="city">
                         <i className="fa fa-phone" /> Số điện thoại
                       </label>
                       <input
-                        required
+                        
                         className="inputform"
                         type="phone"
                         placeholder="09123456789"
-                        value={phone}
-                        onChange={(event) => handlePhoneOrder(event)}
+                        onChange={formik.handleChange}
+                        value={formik.values.phone}
+                        name="phone"
                       />
+                      {formik.errors.phone && (
+                        <p className="errorMsg"> {formik.errors.phone} </p>
+                      )}
                     </div>
                   </div>
-                  {/* end form order  */}
                   <div className="cart__group-button">
                     <Link className="me-sm-3 button" to="/product">
                       Tiếp tục mua hàng
                     </Link>
 
                     <button
-                      onClick={handleCheckOut}
+                      
                       className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button"
                       to="/"
                     >
@@ -275,6 +322,7 @@ function Cart() {
                     </button>
                   </div>
                 </form>
+                {/* end form order  */}
               </div>
             </div>
           </div>

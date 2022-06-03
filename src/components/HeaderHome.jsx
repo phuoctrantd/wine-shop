@@ -4,8 +4,10 @@ import slideimg from "../assets/images/slide-1.jpg";
 import slideimg1 from "../assets/images/slide-2.jpg";
 import slideimg2 from "../assets/images/slide-3.jpg";
 import Menu from "./Menu";
+import { useSelector } from "react-redux";
 
 function HeaderHome() {
+  const cart = useSelector((state) => state.cart);
   return (
     <>
       <header className="header">
@@ -13,7 +15,6 @@ function HeaderHome() {
           <div className="container">
             <nav className="header__menu d-flex justify-content-between align-items-center">
               <ul className="header__top-list">
-                
                 <li className="header__top-item">
                   <a className="header__top-link" href="/order-list.html">
                     Trạng thái đơn hàng
@@ -26,11 +27,9 @@ function HeaderHome() {
                 </li>
                 <li className="header__top-item">
                   <Link className="header__top-link" to={"/cart"}>
-                    Giỏ hàng
+                  Giỏ hàng ({cart.cartItem.length})
                   </Link>
                 </li>
-                
-                
               </ul>
               <form className="d-flex">
                 <input

@@ -4,9 +4,55 @@ import productads from "../assets/images/product-ads.jpg";
 import ProductItem from "../components/ProductItem";
 import Category from "../components/Category";
 import { Link } from "react-router-dom";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
+import { getCategory } from "../app/category.slice";
+import { getProducts } from "../app/productitem.slice";
+import useQuery from "../hook/useQuery";
+import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 function Product() {
-  
+  const [category, setCategory] = useState([]);
+  const [items, setItems] = useState([]);
+  const dispatch = useDispatch();
+  const [filters, setFilters] = useState({});
+  const query = useQuery();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const category_id = params.get("category_id");
+  const [total, setTotal] = useState("");
+  const [page, setPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(6);
+
+  useEffect(() => {
+    dispatch(getCategory())
+      .then(unwrapResult)
+      .then((res) => {
+        setCategory(res.data);
+      });
+  }, [dispatch]);
+
+  useEffect(() => {
+    const _filters = {
+      ...query,
+    };
+    setFilters(_filters);
+
+    const params = {
+      _page: _filters._page,
+      _limit: _filters._limit,
+      ...(category_id ? { category_id } : category_id),
+    };
+    dispatch(getProducts({ params }))
+      .then(unwrapResult)
+      .then((res) => {
+        setItems(res.data);
+        setTotal(res.data.length);
+      });
+  }, [query, dispatch]);
   return (
     <div>
       <Helmet>
@@ -48,7 +94,10 @@ function Product() {
                         />
                       </div>
 
-                      <Category></Category>
+                      <Category
+                        category={category}
+                        filters={filters}
+                      ></Category>
                     </div>
                   </div>
                   <div className="col-12 col-sm-6 col-md-12">
@@ -83,7 +132,13 @@ function Product() {
                 />
                 <input id="list-view" type="radio" name="productView" />
 
-                <ProductItem></ProductItem>
+                <ProductItem
+                  items={items}
+                  page={page}
+                  postPerPage={postPerPage}
+                  total={total}
+                  setPage={setPage}
+                ></ProductItem>
               </div>
             </div>
           </div>

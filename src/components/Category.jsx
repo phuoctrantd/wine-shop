@@ -5,19 +5,10 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import { getCategory } from "../app/category.slice";
 import { path } from "../constants/path";
 import { Link } from "react-router-dom";
-
-function Category() {
-  const [category, setCategory] = useState([]);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getCategory())
-      .then(unwrapResult)
-      .then((res) => {
-        setCategory(res.data);
-      });
-  }, [dispatch]);
-
+import { useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import qs from "query-string";
+function Category({ category, filters }) {
   return (
     <div>
       <nav>
@@ -25,7 +16,7 @@ function Category() {
         <ul className="product__category-list" key={category.id}>
           {category.map((category) => (
             <li className="product__category-item">
-              <Link to={path.product + `?category_${category.id}`}>
+              <Link to={path.product + `?category_id=${category.id}`}>
                 {category.sub === 0 && category.name}
               </Link>
             </li>
@@ -35,7 +26,7 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <Link to={path.product + `?category_${category.id}`}>
+              <Link to={path.product + `?category_id=${category.id}`}>
                 {category.sub === 1 && category.name}
               </Link>
             </li>
@@ -45,7 +36,7 @@ function Category() {
         <ul className="product__category-list">
           {category.map((category) => (
             <li className="product__category-item" key={category.id}>
-              <Link to={path.product + `?category_${category.id}`}>
+              <Link to={path.product + `?category_id=${category.id}`}>
                 {category.sub === 2 && category.name}
               </Link>
             </li>

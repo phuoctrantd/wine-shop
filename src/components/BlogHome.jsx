@@ -29,7 +29,7 @@ function BlogHome() {
       </div>
       <div className="row mt-5">
         {blogItems.map((blogItems) => (
-          <div className="col-lg-6 mt-3" key={blogItems.id}  >
+          <div className="col-lg-6 mt-3" key={blogItems.id}>
             <article className="blogCard">
               <div className="blogCard__img">
                 <img src={blogItems.images} alt={blogItems.title} />

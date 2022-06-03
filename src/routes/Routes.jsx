@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
-import DoneCheckout from "../pages/DoneCheckout";
+import Checkout from "../pages/Checkout";
 
 function Routes() {
   return (
@@ -40,7 +40,7 @@ function Routes() {
       </Route>
       <Route path={path.checkout} exact>
         <Header></Header>
-        <DoneCheckout></DoneCheckout>
+        <Checkout></Checkout>
         <Footer></Footer>
       </Route>
       <Route path={path.about} exact>

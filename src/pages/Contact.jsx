@@ -2,7 +2,7 @@ import React from "react";
 import arrowunderline from "../assets/images/underline-arrow.png";
 import logoyellow from "../assets/images/logo-yellow.png";
 import { Link } from "react-router-dom";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
 function Contact() {
   return (
     <div>
@@ -168,37 +168,31 @@ function Contact() {
                 <nav>
                   <ul>
                     <li>
-                      
                       <Link to="#">
                         <em className="fab fa-facebook-f" />
                       </Link>
                     </li>
                     <li>
-                      
                       <Link to="#">
                         <em className="fab fa-google-plus-g" />
                       </Link>
                     </li>
                     <li>
-                      
                       <Link to="#">
                         <em className="fab fa-twitter" />
                       </Link>
                     </li>
                     <li>
-                     
                       <Link to="#">
                         <em className="fab fa-youtube" />
                       </Link>
                     </li>
                     <li>
-                      
                       <Link to="#">
                         <em className="fab fa-pinterest" />
                       </Link>
                     </li>
                     <li>
-                     
                       <Link to="/">
                         <em className="fab fa-vk" />
                       </Link>

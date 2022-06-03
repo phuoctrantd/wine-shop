@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 import Menu from "./Menu";
 function Header() {
+  const cart = useSelector((state) => state.cart);
   
   return (
     <>
@@ -11,7 +12,6 @@ function Header() {
           <div className="container">
             <nav className="header__menu d-flex justify-content-between align-items-center">
               <ul className="header__top-list">
-                
                 <li className="header__top-item">
                   <a className="header__top-link" href="/order-list.html">
                     Trạng thái đơn hàng
@@ -24,10 +24,9 @@ function Header() {
                 </li>
                 <li className="header__top-item">
                   <Link className="header__top-link" to={"/cart"}>
-                    Giỏ hàng
+                    Giỏ hàng ({cart.cartItem.length})
                   </Link>
                 </li>
-                
               </ul>
               <form className="d-flex">
                 <input
@@ -43,11 +42,11 @@ function Header() {
             </nav>
           </div>
         </div>
-        
+
         <Menu></Menu>
       </header>
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;

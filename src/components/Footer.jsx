@@ -12,15 +12,12 @@ function Footer() {
         <div className="footer__brand">
           <div className="row">
             <div className="footer__brand-img col-md-4">
-              
               <img src={imgbrand1} alt="Authentic brand" />
             </div>
             <div className="footer__brand-img col-md-4">
-              
               <img src={imgbrand2} alt="Retrobrand" />
             </div>
             <div className="footer__brand-img col-md-4">
-              
               <img src={imgbrand3} alt="Bearbrand" />
             </div>
           </div>

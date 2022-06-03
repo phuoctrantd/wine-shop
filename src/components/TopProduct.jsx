@@ -33,11 +33,11 @@ function TopProduct() {
               <div className="top-product__content col-md-4">
                 <div className="top-title">
                   <Link to="/product/ruou-vang-no-da-lat-i.1">
-                  {items.map((items) => (
-                    <h2 className="top-title__title" key={items.id}>
-                      {items.id === 1 && items.name}
-                    </h2>
-                  ))}
+                    {items.map((items) => (
+                      <h2 className="top-title__title" key={items.id}>
+                        {items.id === 1 && items.name}
+                      </h2>
+                    ))}
                   </Link>
                   <img
                     className="top-title__under"
@@ -48,9 +48,8 @@ function TopProduct() {
                 <span className="price price--large">
                   {items.map((items) => (
                     <span key={items.id}>
-                      {  items.id === 1 && items.price.toLocaleString("vi-VN")}
+                      {items.id === 1 && items.price.toLocaleString("vi-VN")}
                     </span>
-                    
                   ))}
                 </span>
                 <br />
