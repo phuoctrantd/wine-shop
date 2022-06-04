@@ -22,7 +22,7 @@ function HeaderHome() {
                 </li>
                 <li className="header__top-item">
                   <a className="header__top-link" href="#!">
-                    Danh sách ưu thích
+                    Danh sách ưa thích
                   </a>
                 </li>
                 <li className="header__top-item">

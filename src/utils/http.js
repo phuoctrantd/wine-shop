@@ -2,7 +2,7 @@ import axios from 'axios'
 class Http {
     constructor() {
       this.instance = axios.create({
-        baseURL: 'http://localhost:3000/',
+        baseURL: 'https://secure-ravine-88114.herokuapp.com/',
         timeout: 10000,
         headers: {
           'Content-Type': 'application/json'
