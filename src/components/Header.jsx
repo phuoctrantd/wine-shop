@@ -13,16 +13,18 @@ function Header() {
             <nav className="header__menu d-flex justify-content-between align-items-center">
               <ul className="header__top-list">
                 <li className="header__top-item">
-                  <a className="header__top-link" href="/order-list.html">
+                  
+                  <a className="header__top-link " href="/order-list.html">
                     Trạng thái đơn hàng
                   </a>
                 </li>
+                
                 <li className="header__top-item">
                   <a className="header__top-link" href="#!">
                     Danh sách ưa thích
                   </a>
                 </li>
-                <li className="header__top-item">
+                <li className="header__top-item d-flex">
                   <Link className="header__top-link" to={"/cart"}>
                     Giỏ hàng ({cart.cartItem.length})
                   </Link>
