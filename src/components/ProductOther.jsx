@@ -14,7 +14,7 @@ function ProductOther() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    initialSlide: 1,
+    initialSlide: 2,
 
     responsive: [
       {
@@ -24,6 +24,7 @@ function ProductOther() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          initialSlide: 2,
         },
       },
       {
@@ -40,6 +41,7 @@ function ProductOther() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 2,
         },
       },
     ],
