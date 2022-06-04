@@ -24,7 +24,7 @@ function Header() {
                     Danh sách ưa thích
                   </a>
                 </li>
-                <li className="header__top-item d-flex">
+                <li className="header__top-item ">
                   <Link className="header__top-link" to={"/cart"}>
                     Giỏ hàng ({cart.cartItem.length})
                   </Link>
