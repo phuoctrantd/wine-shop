@@ -1,11 +1,16 @@
 import React from "react";
 
 function Checkout() {
+
+  
   return (
     <div>
       <div>
         <h1 className="text--upper">Đặt Hàng Thành Công!</h1>
         <div className="p-checkout">
+        <p>
+            Mã đơn hàng của quý khách là : {localStorage.getItem("tracking")}
+          </p>
           <p>
             Đơn hàng của bạn CHẮC CHẮN đã được chuyển tới hệ thống xử lý đơn
             hàng của Winehourse.

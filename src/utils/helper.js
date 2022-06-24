@@ -14,6 +14,13 @@ export const payLoadCreater = asyncFunc => async (arg, thunkAPI) => {
     return arr[arr.length - 1]
   }
 
+  export const getIdTracking = url => {
+    const arr = url
+    return arr
+  }
+
+  
+ 
   
   
 const to_slug = (str) =>

@@ -3,6 +3,10 @@ import http from '../utils/http'
  const checkoutApi = {
      checkout(data) {
          return http.post(URL,data)
-     }
+     },
+     getTracking(tracking) {
+        return http.get(`${URL}/${tracking}`)
+      },
+      
  }
  export default checkoutApi

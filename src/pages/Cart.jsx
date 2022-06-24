@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import arrowunderline from "../assets/images/underline-arrow.png";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions, checkout } from "../app/cart.slice";
@@ -10,14 +10,13 @@ import { useHistory } from "react-router-dom";
 import { path } from "../constants/path";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { NAME_REGEX, VN_PHONE_NUMBER_REGEX } from "../constants/regex";
+import { VN_PHONE_NUMBER_REGEX } from "../constants/regex";
+
 
 function Cart() {
   const history = useHistory();
-
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-
   const handleDecreaseCart = (cartItem) => {
     dispatch(cartActions.decreaseCart(cartItem));
   };
@@ -37,6 +36,17 @@ function Cart() {
   };
   const toltal = SubTotal();
 
+  const idTracking = () => parseInt(Date.now() * Math.random());
+  const id = idTracking()
+ 
+  
+  
+  
+  
+ 
+ 
+
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -48,7 +58,7 @@ function Cart() {
       name: Yup.string()
         .required("Tên là trường bắt buộc")
         .min(4, "Tên quá ngắn")
-        .matches(NAME_REGEX, "Chỉ được phép nhập bảng chữ cái cho trường này")
+
         .max(15, "Vui lòng nhập tối đa 15 kí tự trở xuống"),
       email: Yup.string()
         .required("Email là trường bắt buộc")
@@ -70,14 +80,19 @@ function Cart() {
         toltal,
         cartItem: cart.cartItem,
         info,
+        id
+        
       };
       dispatch(checkout(body))
         .then(unwrapResult)
         .then(() => {});
       dispatch(cartActions.clearCart(cartItem));
+      localStorage.setItem("tracking", JSON.stringify(id));
       history.push(path.checkout);
     },
   });
+
+  
 
   return (
     <div>
@@ -113,216 +128,175 @@ function Cart() {
             />
           </div>
           {cart.cartItem.length === 0 && (
-                    
-                    
-                    <p className="carterror">Chưa có sản phẩm trong giỏ</p>
-  
-                  )}
+            <p className="carterror">Chưa có sản phẩm trong giỏ</p>
+          )}
           {/* cart          */}
-          <div className="cart__table">
-            <table className="mt-5">
-              <thead>
-                <tr>
-                  <th>Ảnh</th>
-                  <th>Tên sản phẩm</th>
-                  <th>Giá</th>
-                  <th>Số lượng</th>
-                  <th>Tổng Số</th>
-                  <th>Xóa</th>
-                </tr>
-              </thead>
-
-              <tbody>
-               
-                {cart.cartItem.map((cartItem) => (
-                  <tr key={cartItem.product_id}>
-                    <td>
-                      <img
-                        src={cartItem.images.url || cartItem.images}
-                        alt={cartItem.title}
-                      />
-                    </td>
-
-                    <td>
-                      <div className="cart-item__name">{cartItem.title}</div>
-                    </td>
-                    
-                    <td>
-                      <h4 className="price">
-                        {cartItem.price.toLocaleString("vi-VN")}
-                      </h4>
-                    </td>
-                    <td>
-                      <button
-                        className="quantitycart"
-                        onClick={() => handleDecreaseCart(cartItem)}
-                      >
-                        -
-                      </button>
-                      <input
-                        className="inputquantitycart"
-                        value={cartItem.buy_count}
-                      />
-                      <button
-                        className="quantitycart"
-                        onClick={() => handleIncreaseCart(cartItem)}
-                      >
-                        +
-                      </button>
-                    </td>
-                    <td>
-                      <h4 className="price">
-                        {(cartItem.price * cartItem.buy_count).toLocaleString(
-                          "vi-VN"
-                        )}
-                      </h4>
-                    </td>
-                    <td>
-                      <button
-                        className="cartremove"
-                        onClick={() => deleteCart(cartItem)}
-                      >
-                        <em className="cart__remove far fa-trash-alt" />
-                      </button>
-                    </td>
+          {cart.cartItem.length >= 1 && (
+            <div className="cart__table">
+              <table className="mt-5">
+                <thead>
+                  <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng Số</th>
+                    <th>Xóa</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+
+                <tbody>
+                  {cart.cartItem.map((cartItem) => (
+                    <tr key={cartItem.product_id}>
+                      <td>
+                        <img
+                          src={cartItem.images.url || cartItem.images}
+                          alt={cartItem.title}
+                        />
+                      </td>
+
+                      <td>
+                        <div className="cart-item__name">{cartItem.title}</div>
+                      </td>
+
+                      <td>
+                        <h4 className="price">
+                          {cartItem.price.toLocaleString("vi-VN")}
+                        </h4>
+                      </td>
+                      <td>
+                        <button
+                          className="quantitycart"
+                          onClick={() => handleDecreaseCart(cartItem)}
+                        >
+                          -
+                        </button>
+                        <input
+                          className="inputquantitycart"
+                          value={cartItem.buy_count}
+                        />
+                        <button
+                          className="quantitycart"
+                          onClick={() => handleIncreaseCart(cartItem)}
+                        >
+                          +
+                        </button>
+                      </td>
+                      <td>
+                        <h4 className="price">
+                          {(cartItem.price * cartItem.buy_count).toLocaleString(
+                            "vi-VN"
+                          )}
+                        </h4>
+                      </td>
+                      <td>
+                        <button
+                          className="cartremove"
+                          onClick={() => deleteCart(cartItem)}
+                        >
+                          <em className="cart__remove far fa-trash-alt" />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
           {/* end cart  */}
           {/* total   */}
-          <table className="table table-borderless bg-white mt20 cart-total">
-            <tbody>
-              <tr>
-                <td className="w-20px padt24" />
-                <td className="image padt24" />
-                <td className="text-right pt-3 pb-1 vertical-align-middle">
-                  <div className="d-flex justify-content-end align-items-center">
-                    <div className="w-120px text-align-left d-flex">
-                      <span className="fz-14 color-grey-900">Tổng tiền</span>
-                    </div>
-                    <div className="w-180px fz-20">
-                      <span className="txt-oldTotal-val price">
-                        {toltal.toLocaleString("vi-VN")}
-                      </span>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="w-20px padt24" />
-                <td className="image padt24" />
-                <td className="text-right pt-1 pb-1 vertical-align-middle"></td>
-              </tr>
-              <tr className="border-bottom">
-                <td className="w-20px padt24" />
-                <td className="image padt24" />
-                <td className="text-right pt-1 pb-3">
-                  <div className="d-flex justify-content-end align-items-center total">
-                    <div className="w-120px text-align-left d-flex">
-                      <span className="fz-14 color-grey-900">
-                        Tổng thanh toán
-                      </span>
-                    </div>
-                    <div className="w-180px fz-24 lh32 color-error-500 font-bold txt-total-val price">
-                      {toltal.toLocaleString("vi-VN")}
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="w-20px padt24" />
-                <td className="image padt24" />
-                <td className="text-right pt-3 pb-3"></td>
-              </tr>
-            </tbody>
-          </table>
+          {cart.cartItem.length >= 1 && (
+            <div className="row col-50 totalcart" >
+            <h2 className="price ">TỔNG THANH TOÁN : {toltal.toLocaleString("vi-VN")}</h2>
+          </div>
+          )}
           {/* end total */}
+                {/* form order */}
+                {cart.cartItem.length >= 1 && (
           <div className="row-form">
             <div className="col-75">
               <div className="container-form">
-                {/* form order */}
-                <form onSubmit={formik.handleSubmit}>
-                  <div className="row">
-                    <div className="col-50">
-                      <h3>Địa chỉ nhận hàng</h3>
-                      <label className="labelform" htmlFor="fname">
-                        <i className="fa fa-user" /> Họ và tên
-                      </label>
-                      <input
-                        className="inputform"
-                        type="text"
-                        placeholder="Trần Văn A"
-                        onChange={formik.handleChange}
-                        value={formik.values.name}
-                        name="name"
-                      />
-                      {formik.errors.name && (
-                        <p className="errorMsg"> {formik.errors.name} </p>
-                      )}
-                      <label className="labelform" htmlFor="email">
-                        <i className="fa fa-envelope" /> Email
-                      </label>
-                      <input
-                        className="inputform"
-                        type="text"
-                        placeholder="john@example.com"
-                        onChange={formik.handleChange}
-                        value={formik.values.email}
-                        name="email"
-                      />
-                      {formik.errors.email && (
-                        <p className="errorMsg"> {formik.errors.email} </p>
-                      )}
-                      <label className="labelform" htmlFor="adr">
-                        <i className="fa fa-address-card-o" /> Địa chỉ
-                      </label>
-                      <input
-                        className="inputform"
-                        type="text"
-                        placeholder="54 Trường Chinh"
-                        onChange={formik.handleChange}
-                        value={formik.values.address}
-                        name="address"
-                      />
-                      {formik.errors.address && (
-                        <p className="errorMsg"> {formik.errors.address} </p>
-                      )}
-                      <label className="labelform" htmlFor="city">
-                        <i className="fa fa-phone" /> Số điện thoại
-                      </label>
-                      <input
-                        className="inputform"
-                        type="phone"
-                        placeholder="09123456789"
-                        onChange={formik.handleChange}
-                        value={formik.values.phone}
-                        name="phone"
-                      />
-                      {formik.errors.phone && (
-                        <p className="errorMsg"> {formik.errors.phone} </p>
-                      )}
+                  <form onSubmit={formik.handleSubmit}>
+                    <div className="row">
+                      <div className="col-50">
+                        <h3>Thông tin nhận hàng</h3>
+                        <label className="labelform" htmlFor="fname">
+                          <i className="fa fa-user" /> Họ và tên
+                        </label>
+                        <input
+                          className="inputform"
+                          type="text"
+                          placeholder="Trần Văn A"
+                          onChange={formik.handleChange}
+                          value={formik.values.name}
+                          name="name"
+                        />
+                        {formik.errors.name && (
+                          <p className="errorMsg"> {formik.errors.name} </p>
+                        )}
+                        <label className="labelform" htmlFor="email">
+                          <i className="fa fa-envelope" /> Email
+                        </label>
+                        <input
+                          className="inputform"
+                          type="text"
+                          placeholder="john@example.com"
+                          onChange={formik.handleChange}
+                          value={formik.values.email}
+                          name="email"
+                        />
+                        {formik.errors.email && (
+                          <p className="errorMsg"> {formik.errors.email} </p>
+                        )}
+                        <label className="labelform" htmlFor="adr">
+                          <i className="fa fa-address-card-o" /> Địa chỉ
+                        </label>
+                        <input
+                          className="inputform"
+                          type="text"
+                          placeholder="54 Trường Chinh"
+                          onChange={formik.handleChange}
+                          value={formik.values.address}
+                          name="address"
+                        />
+                        {formik.errors.address && (
+                          <p className="errorMsg"> {formik.errors.address} </p>
+                        )}
+                        <label className="labelform" htmlFor="city">
+                          <i className="fa fa-phone" /> Số điện thoại
+                        </label>
+                        <input
+                          className="inputform"
+                          type="phone"
+                          placeholder="09123456789"
+                          onChange={formik.handleChange}
+                          value={formik.values.phone}
+                          name="phone"
+                        />
+                        {formik.errors.phone && (
+                          <p className="errorMsg"> {formik.errors.phone} </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <div className="cart__group-button">
-                    <Link className="me-sm-3 button" to="/product">
-                      Tiếp tục mua hàng
-                    </Link>
+                    <div className="cart__group-button">
+                      <Link className="me-sm-3 button" to="/product">
+                        Tiếp tục mua hàng
+                      </Link>
 
-                    <button
-                      disabled={cart.cartItem.length === 0}
-                      className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button"
-                      to="/"
-                    >
-                      Đặt hàng
-                    </button>
-                  </div>
-                </form>
+                      <button
+                        disabled={cart.cartItem.length === 0}
+                        className="flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 button"
+                        to="/"
+                      >
+                        Đặt hàng
+                      </button>
+                    </div>
+                  </form>
                 {/* end form order  */}
               </div>
             </div>
           </div>
+                )}
         </div>
       </section>
     </div>

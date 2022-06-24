@@ -14,6 +14,8 @@ import Header from "../components/Header";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import Checkout from "../pages/Checkout";
+import Tracking from "../pages/Tracking";
+import TrackingDetail from "../pages/TrackingDetail";
 
 function Routes() {
   return (
@@ -63,12 +65,23 @@ function Routes() {
         <Contact></Contact>
         <Footer></Footer>
       </Route>
-
+      <Route path={path.tracking} exact>
+        <Header></Header>
+        <Tracking></Tracking>
+        <Footer></Footer>
+      </Route>
+      <Route path={path.trackingdetail} exact>
+        <Header></Header>
+        <TrackingDetail></TrackingDetail>
+        <Footer></Footer>
+      </Route>
       <Route path={path.notFound} exact>
         <Header></Header>
         <NotFound></NotFound>
         <Footer></Footer>
       </Route>
+      
+
     </Switch>
   );
 }

@@ -1901,3 +1901,57 @@ a {
   font-size: 20px;
   
 }
+.inputformtracking{
+  width: 1000px;
+  margin: auto;
+  display: block;
+  
+}
+@media (max-width: 912px) {
+  .inputformtracking {
+    width: 250px;;
+  }
+}
+
+.buttontracking{
+  margin: auto;
+  display: block;
+  transition: all 0.2s ease-in-out;
+    position: relative;
+    padding: 0.4rem 1.6rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+   
+}
+.buttontracking:hover {
+  background-color: #e6ae48;
+  color: #fff;
+}
+
+.errorchekout{
+  text-align: center;
+}
+.errortracking{
+  text-align: center;
+  color: red;
+}
+.toltaltracking{
+  margin-top: 10px;
+  float: right;
+  display: block;
+}
+.totalcart{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  
+}

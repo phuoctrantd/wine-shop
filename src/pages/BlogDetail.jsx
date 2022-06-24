@@ -68,7 +68,7 @@ function BlogDetail() {
                     <div className="blog-detail__video">
                       <h2 className="blog-detail__title">Latest video</h2>
                       <div className="video">
-                        {" "}
+                        
                         <a
                           className="video__play-btn"
                           href="https://www.youtube.com/watch?v=p37_Ux1G_BI"

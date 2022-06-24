@@ -16,9 +16,9 @@ function HeaderHome() {
             <nav className="header__menu d-flex justify-content-between align-items-center">
               <ul className="header__top-list">
                 <li className="header__top-item">
-                  <a className="header__top-link" href="/order-list.html">
+                  <Link className="header__top-link" to="/tracking">
                     Trạng thái đơn hàng
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__top-item">
                   <a className="header__top-link" href="#!">

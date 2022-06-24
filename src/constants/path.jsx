@@ -8,6 +8,8 @@ export const path ={
     blogDetail:'/blog/:idBlog',
     contact:'/contact',
     checkout:'/checkout',
+    tracking:'/tracking',
+    trackingdetail:'/tracking/:idTracking',
     notFound:'*'
 
 }
