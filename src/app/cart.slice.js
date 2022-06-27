@@ -20,9 +20,10 @@ const cart = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const itemIndex = state.cartItem.findIndex((item) => item.product_id === action.payload.product_id);
+      const itemIndex = state.cartItem.findIndex((item) => item.product_id == action.payload.product_id);
+      
       if (itemIndex >= 0) {
-        state.cartItem[itemIndex].buy_count += 1;
+        state.cartItem[itemIndex].buy_count += action.payload.buy_count;
         toast.info("thêm sp thành công", {
           position: "top-right"
         })
@@ -30,7 +31,7 @@ const cart = createSlice({
 
       }
       else {
-        const tempProduct = { ...action.payload, buy_count: 1 }
+        const tempProduct = { ...action.payload, buy_count: action.payload.buy_count }
         state.cartItem.push(tempProduct);
         toast.success(`thêm sản phẩm ${action.payload.title} thành công`, {
           position: "top-right",

@@ -174,6 +174,7 @@ function Cart() {
                         <input
                           className="inputquantitycart"
                           value={cartItem.buy_count}
+                          
                         />
                         <button
                           className="quantitycart"
