@@ -38,8 +38,9 @@ function TopProduct() {
             <div className="row">
               <div className="col-md-8">
                 <div className="product-img">
-                  <img src={topproduct} alt="topproduct" />
-
+                <Link to="/product/ruou-vang-no-da-lat-i.1">
+                  <img src={topproduct} alt="topproduct"  />
+                </Link>
                   <div className="product-img__tag-sale" />
                 </div>
               </div>

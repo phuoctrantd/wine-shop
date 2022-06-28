@@ -8,12 +8,13 @@ import { getTracking } from "../app/tracking.slice";
 import { useParams } from "react-router-dom";
 import { getIdTracking } from "../utils/helper";
 import { Helmet } from "react-helmet";
+import { useSelector } from "react-redux";
 function TrackingDetail() {
   const dispatch = useDispatch();
   const [tracking, setTracking] = useState([]);
   const { idTracking } = useParams();
   const realIdTracking = getIdTracking(idTracking);
-
+  const loading = useSelector((state) => state.app.loading);
   useEffect(() => {
     dispatch(getTracking(realIdTracking))
       .then(unwrapResult)
@@ -21,8 +22,6 @@ function TrackingDetail() {
         setTracking(res.data);
       });
   }, [dispatch]);
-
-  
 
   return (
     <div>
@@ -43,6 +42,7 @@ function TrackingDetail() {
           </nav>
         </div>
       </section>
+
       {realIdTracking != tracking.id && (
         <div>
           <h1 className="errortracking">SAI MÃ VẬN ĐƠN</h1>
@@ -87,7 +87,9 @@ function TrackingDetail() {
                           <td className="text-start">
                             <p className="m-0">{tracking.title}</p>
                           </td>
-                          <td  className="price">{tracking.price.toLocaleString("vi-VN")}</td>
+                          <td className="price">
+                            {tracking.price.toLocaleString("vi-VN")}
+                          </td>
                           <td>{tracking.buy_count}</td>
                           <td className="price">
                             {(
@@ -101,7 +103,10 @@ function TrackingDetail() {
                     </tbody>
                   </table>
                   <div className="toltaltracking">
-                    <h2 className="price">TỔNG THANH TOÁN : {tracking.toltal.toLocaleString("vi-VN")}</h2>
+                    <h2 className="price">
+                      TỔNG THANH TOÁN :{" "}
+                      {tracking.toltal.toLocaleString("vi-VN")}
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -120,7 +125,6 @@ function TrackingDetail() {
                       <em className="fas fa-map-marker-alt" />
                       <div className="ps-5">
                         <p>{tracking.info.address}</p>
-                        
                       </div>
                     </div>
                     <div className="user-info__item">
@@ -129,7 +133,6 @@ function TrackingDetail() {
                         <p>{tracking.info.phone}</p>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
