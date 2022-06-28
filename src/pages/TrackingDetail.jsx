@@ -8,13 +8,12 @@ import { getTracking } from "../app/tracking.slice";
 import { useParams } from "react-router-dom";
 import { getIdTracking } from "../utils/helper";
 import { Helmet } from "react-helmet";
-import { useSelector } from "react-redux";
 function TrackingDetail() {
   const dispatch = useDispatch();
   const [tracking, setTracking] = useState([]);
   const { idTracking } = useParams();
   const realIdTracking = getIdTracking(idTracking);
-  const loading = useSelector((state) => state.app.loading);
+  
   useEffect(() => {
     dispatch(getTracking(realIdTracking))
       .then(unwrapResult)
