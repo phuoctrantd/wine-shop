@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Menu from "./Menu";
+import {
+  ShoppingCartOutlined
+} from '@ant-design/icons';
 function Header() {
   const cart = useSelector((state) => state.cart);
   
@@ -26,7 +29,7 @@ function Header() {
                 </li>
                 <li className="header__top-item ">
                   <Link className="header__top-link" to={"/cart"}>
-                    Giỏ hàng ({cart.cartItem.length})
+                  <ShoppingCartOutlined style={{ fontSize: "20px" }} /> Giỏ hàng ({cart.cartItem.length})
                   </Link>
                 </li>
               </ul>

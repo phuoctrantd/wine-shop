@@ -5,6 +5,10 @@ import slideimg1 from "../assets/images/slide-2.jpg";
 import slideimg2 from "../assets/images/slide-3.jpg";
 import Menu from "./Menu";
 import { useSelector } from "react-redux";
+import {
+  ShoppingCartOutlined
+} from '@ant-design/icons';
+
 
 function HeaderHome() {
   const cart = useSelector((state) => state.cart);
@@ -27,7 +31,7 @@ function HeaderHome() {
                 </li>
                 <li className="header__top-item">
                   <Link className="header__top-link" to={"/cart"}>
-                  Giỏ hàng ({cart.cartItem.length})
+                  <ShoppingCartOutlined style={{ fontSize: "20px" }} /> Giỏ hàng ({cart.cartItem.length})
                   </Link>
                 </li>
               </ul>
