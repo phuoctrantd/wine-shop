@@ -78,14 +78,6 @@ const cart = createSlice({
       }
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
-    changeCarItemQuantity(state, action) {
-      const itemIndex = state.cartItem.findIndex((cartItem) => cartItem.product_id === action.payload.product_id);
-      
-        state.cartItem[itemIndex].buy_count = action.payload.buy_count
-
-        
-      localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
-    },
     removeFromCart(state, action) {
       state.cartItem.map((cartItem) => {
         if (cartItem.product_id === action.payload.product_id) {
