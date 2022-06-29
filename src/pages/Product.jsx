@@ -26,7 +26,8 @@ function Product() {
   const [total, setTotal] = useState("");
   const [page, setPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(6);
-
+  
+  const name = params.get("name");
   useEffect(() => {
     dispatch(getCategory())
       .then(unwrapResult)
@@ -45,6 +46,7 @@ function Product() {
       _page: _filters._page,
       _limit: _filters._limit,
       ...(category_id ? { category_id } : category_id),
+      ...(name ? { name } : name),
     };
     dispatch(getProducts({ params }))
       .then(unwrapResult)
@@ -53,6 +55,7 @@ function Product() {
         setTotal(res.data.length);
       });
   }, [query, dispatch]);
+  
   return (
     <div>
       <Helmet>

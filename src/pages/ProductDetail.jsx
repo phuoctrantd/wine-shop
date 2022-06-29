@@ -13,6 +13,8 @@ import ContentProduct from "../components/ContentProduct";
 import { cartActions } from "../app/cart.slice";
 import QuantityControler from "../components/QuantityControler";
 import { Helmet } from "react-helmet";
+import Comment from "../components/Comment";
+
 
 function ProductDetail() {
   const [productDetail, setProductDetail] = useState();
@@ -192,36 +194,9 @@ function ProductDetail() {
                       <p className="desc">{productDetail.description}</p>
                     </div>
                     <div className="product-detail__share mt-5 d-flex align-items-center">
-                      <div
-                        className="fb-share-button"
-                        data-href="https://developers.facebook.com/docs/plugins/"
-                        data-layout="button_count"
-                        data-size="small"
-                      >
-                        <div
-                          className="fb-share-button"
-                          data-href="http://localhost:3001/"
-                          data-layout="button"
-                          data-size="small"
-                        >
-                          <a
-                            target="_blank"
-                            href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3001%2F&amp;src=sdkpreparse"
-                            className="fb-xfbml-parse-ignore"
-                          >
-                            Chia sẻ
-                          </a>
-                        </div>
-                      </div>
-                      <span className="me-4" />
-                      <a
-                        className="twitter-share-button"
-                        href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-                        data-show-count="false"
-                      >
-                        Tweet
-                      </a>
-                      <span className="me-4" />
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwine-hourse.vercel.app%2F&width=450&layout=standard&action=like&size=large&share=true&height=35&appId=412622786898356" width={450} height={35} style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder={0} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
+
+
                     </div>
                   </div>
                 </div>
@@ -246,6 +221,8 @@ function ProductDetail() {
           </div>
         </>
       )}
+
+
     </div>
   );
 }
