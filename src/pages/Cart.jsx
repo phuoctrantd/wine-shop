@@ -27,6 +27,10 @@ function Cart() {
     dispatch(cartActions.removeFromCart(cartItem));
   };
 
+  const changeCarItemQuantity = (cartItem) =>{
+    dispatch(cartActions.changeCarItemQuantity(cartItem))
+  }
+
   const SubTotal = () => {
     let toltal = 0;
     cart.cartItem.map(
@@ -173,8 +177,8 @@ function Cart() {
                         </button>
                         <input
                           className="inputquantitycart"
-                          value={cartItem.buy_count}
                           
+                          onChange={changeCarItemQuantity(cartItem)}
                         />
                         <button
                           className="quantitycart"

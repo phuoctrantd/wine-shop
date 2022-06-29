@@ -70,6 +70,7 @@ function ContentProduct(props) {
         </div>
       </div>
     </section>
+    
   );
 }
 

@@ -57,7 +57,6 @@ const cart = createSlice({
       const itemIndex = state.cartItem.findIndex((cartItem) => cartItem.product_id === action.payload.product_id);
       if (state.cartItem[itemIndex].buy_count > 1) {
         state.cartItem[itemIndex].buy_count -= 1;
-
         toast.info("Xóa sản phẩm thành công", {
           position: "top-right",
           autoClose: 1000,
@@ -77,6 +76,14 @@ const cart = createSlice({
         });
 
       }
+      localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
+    },
+    changeCarItemQuantity(state, action) {
+      const itemIndex = state.cartItem.findIndex((cartItem) => cartItem.product_id === action.payload.product_id);
+      
+        state.cartItem[itemIndex].buy_count = action.payload.buy_count
+
+        
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
     removeFromCart(state, action) {

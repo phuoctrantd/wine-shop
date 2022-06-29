@@ -185,8 +185,10 @@ function ProductDetail() {
                         </a>
                       </span>
                     </div>
+
                     <div className="product-detail__desc">
                       <h3 className="part-title">Mô tả</h3>
+
                       <p className="desc">{productDetail.description}</p>
                     </div>
                     <div className="product-detail__share mt-5 d-flex align-items-center">
