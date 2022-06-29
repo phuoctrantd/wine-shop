@@ -5,8 +5,31 @@ import Menu from "./Menu";
 import {
   ShoppingCartOutlined
 } from '@ant-design/icons';
+import { useState,useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import useQuery from "../hook/useQuery";
+import { path } from "../constants/path";
 function Header() {
   const cart = useSelector((state) => state.cart);
+  const [searchValue,setSearchValue] = useState("")
+  const history = useHistory()
+  const query = useQuery()
+
+ 
+
+  useEffect(() => {
+    const { name = "" } = query
+    setSearchValue(name)
+  }, [query])
+
+  const onChangeSearch = event =>{
+    setSearchValue(event.target.value)
+  }
+  
+  const search = event => {
+    event.preventDefault()
+    history.push(path.product + `?name=${searchValue}`)
+  }
   
   return (
     <>
@@ -33,12 +56,14 @@ function Header() {
                   </Link>
                 </li>
               </ul>
-              <form className="d-flex">
+              <form className="d-flex" onSubmit={search}>
                 <input
                   className="bg-transparent form-control me-2 py-0"
                   type="search"
                   placeholder="Tìm kiếm ở đây..."
                   aria-label="Search"
+                  value={searchValue}
+              onChange={onChangeSearch}
                 />
                 <button className="btn" type="submit">
                   <em className="fas fa-search" />

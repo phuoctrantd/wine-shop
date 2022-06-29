@@ -1,5 +1,5 @@
 import React from "react";
-
+import Comment from "../components/Comment";
 import gallery6 from "../assets/images/gallery-6.jpg";
 function ContentProduct(props) {
   return (
@@ -37,6 +37,20 @@ function ContentProduct(props) {
                     Thông tin sản phẩm
                   </button>
                 </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="pills-3-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-3"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-3"
+                    aria-selected="false"
+                  >
+                    Bình luận
+                  </button>
+                </li>
               </ul>
               <div className="tab-content" id="pills-tabContent">
                 <div
@@ -56,6 +70,15 @@ function ContentProduct(props) {
                 >
                   <p className="desc">{props.productDetail.content}</p>
                 </div>
+                <div
+                  className="tab-pane fade"
+                  id="pills-3"
+                  role="tabpanel"
+                  aria-labelledby="pills-3-tab"
+                >
+                   <Comment></Comment>
+                </div>
+                
               </div>
             </div>
           </div>
